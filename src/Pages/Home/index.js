@@ -13,8 +13,11 @@ import {
 	StickyIn,
 	ZoomIn,
 } from 'react-scroll-motion';
+import { MouseParallaxContainer, MouseParallaxChild } from 'react-parallax-mouse';
 import './style.css';
 import headerImage from '../../img/header-image.jpg';
+import galaxyImage from '../../img/background.png';
+import faceIllus from '../../img/face-illus.png';
 import projectOne from '../../img/project-1.png';
 import projectTwo from '../../img/project-2.png';
 import projectThree from '../../img/project-3.png';
@@ -54,6 +57,7 @@ const Home = () => {
 				<Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
 					<div className='image-container'>
 						<img src={headerImage} alt='headerImg' />
+
 						<div className='black-background'></div>
 					</div>
 				</Animator>
@@ -75,40 +79,13 @@ const Home = () => {
 			</ScrollPage>
 			<ScrollPage page={1}>
 				<Animator animation={ZoomScrollOut}>
-					<div className='section-title'>Portfolio</div>
-				</Animator>
-			</ScrollPage>
-			<ScrollPage page={2}>
-				<Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
-					<div className='portfolio-content'>
-						{work?.map((work, index) => {
-							return (
-								<a href={work?.link} target='_blank' key={work?.name} rel='noreferrer'>
-									<div className='portfolio-card'>
-										<div className='project-image'>
-											<img src={work?.imageSrc} alt={work?.name} />
-										</div>
-
-										<div className='portfolio-title'>
-											<h3>{work?.name}</h3>
-										</div>
-										<div className='count'>{index}</div>
-									</div>
-								</a>
-							);
-						})}
-					</div>
-				</Animator>
-			</ScrollPage>
-			<ScrollPage page={3}>
-				<Animator animation={ZoomScrollOut}>
 					<div className='section-title about-me'>About Me</div>
 				</Animator>
 			</ScrollPage>
-			<ScrollPage page={4}>
-				<Animator animation={batch(Fade(), Sticky(), MoveOut(-1000, -400))}>
+			<ScrollPage page={2}>
+				<Animator animation={batch(Fade(), Sticky(), MoveOut(-1650, -100))}>
 					<div className='background-image-container'>
-						<img src={projectThree} alt='my-pic' />
+						<img src={faceIllus} alt='my-pic' />
 						<div className='black-background'></div>
 					</div>
 				</Animator>
@@ -130,6 +107,34 @@ const Home = () => {
 					</div>
 				</Animator>
 			</ScrollPage>
+			<ScrollPage page={3}>
+				<Animator animation={ZoomScrollOut}>
+					<div className='section-title'>Portfolio</div>
+				</Animator>
+			</ScrollPage>
+			<ScrollPage page={4}>
+				<Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
+					<div className='portfolio-content'>
+						{work?.map((work, index) => {
+							return (
+								<a href={work?.link} target='_blank' key={work?.name} rel='noreferrer'>
+									<div className='portfolio-card'>
+										<div className='project-image'>
+											<img src={work?.imageSrc} alt={work?.name} />
+										</div>
+
+										<div className='portfolio-title'>
+											<h3>{work?.name}</h3>
+										</div>
+										<div className='count'>{index}</div>
+									</div>
+								</a>
+							);
+						})}
+					</div>
+				</Animator>
+			</ScrollPage>
+
 			<ScrollPage page={5}>
 				<Animator animation={ZoomScrollOut}>
 					<div className='section-title contact'>Contact Me</div>
