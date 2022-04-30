@@ -67,7 +67,7 @@
 
 	.position h2 {
 		letter-spacing: 1px;
-		font-size: clamp (12px, 1vw, 26px);
+		font-size: clamp(12px, 1vw, 26px);
 	}
 }
 
@@ -79,10 +79,10 @@
 }
 
 .section-title::after {
-	content: 'portfolio';
+	content: 'Projects';
 	position: absolute;
 	top: -15px;
-	left: -100px;
+	left: -60px;
 	color: black;
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: rgba(255, 255, 255, 0.294);
@@ -128,7 +128,7 @@
 
 .position-title h3 {
 	color: white;
-	font-size: clamp (18px, 3vw, 35px);
+	font-size: clamp(18px, 3vw, 35px);
 	letter-spacing: 5px;
 	font-weight: 400;
 	display: inline-block;
@@ -179,7 +179,7 @@
 
 	.portfolio-title h3 {
 		color: white;
-		font-size: clamp (16px, 2vw, 25px);
+		font-size: clamp(16px, 2vw, 25px);
 		letter-spacing: 1px;
 		margin-top: 10px;
 	}
@@ -203,7 +203,7 @@
 	max-width: 1000px;
 	bottom: 0;
 	position: relative;
-	max-height: 500px;
+	max-height: 570px;
 }
 
 .background-image-container img {
@@ -211,20 +211,39 @@
 }
 
 .details {
+	width: 96vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	position: relative;
-	top: -220px;
-	font-size: clamp (14px, 2vw, 20px);
+	top: -340px;
+	font-size: clamp(14px, 3vw, 24px);
 	font-family: 'Open Sans', sans-serif;
 }
 
 .details h2 {
-	font-size: clamp (20px, 1.4vw, 28px);
+	font-size: clamp(20px, 1.4vw, 28px);
 }
 
 .details .bio {
-	max-width: 500px;
+	position: relative;
+	top: 50vh;
+	width: 400px;
 	font-weight: 300;
 	margin-top: 15px;
+	font-family: 'Titan One', cursive;
+	font-size: clamp(14px, 4vw, 48px);
+}
+
+.details .right {
+	text-align: right;
+}
+
+.details .greeting {
+	position: relative;
+	top: 60px;
+	font-family: 'Neonderthaw', cursive;
+	font-size: clamp(14px, 7vw, 120px);
 }
 
 @media only screen and (max-width: 600px) {

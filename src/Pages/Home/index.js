@@ -52,7 +52,7 @@ const Home = () => {
 		win.focus();
 	};
 	return (
-		<ScrollContainer>
+		<ScrollContainer snap='proximity'>
 			<ScrollPage page={0}>
 				<Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
 					<div className='image-container'>
@@ -83,33 +83,29 @@ const Home = () => {
 				</Animator>
 			</ScrollPage>
 			<ScrollPage page={2}>
+				<Animator animation={batch(Fade(), Sticky(), MoveOut(1000, 500))}>
+					<div className='details'>
+						<p className='bio'>
+							Just a dev who loves to build stuffs for the web. <br />
+							Also passionate to become a fullstacker one day.
+						</p>
+						<div className='greeting'>Hey There !</div>
+						<p className='bio right'>
+							I have over a year of professional developing experience and I still thrive to upgrade
+							my skills constantly.
+						</p>
+					</div>
+				</Animator>
 				<Animator animation={batch(Fade(), Sticky(), MoveOut(-1650, -100))}>
 					<div className='background-image-container'>
 						<img src={faceIllus} alt='my-pic' />
 						<div className='black-background'></div>
 					</div>
 				</Animator>
-				<Animator animation={batch(Fade(), Sticky(), MoveOut(1000, 500))}>
-					<div className='details'>
-						<div className='greeting'>Hello</div>
-						<p className='bio'>
-							Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem
-							ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum
-							dolor sit amet Lorem ipsum dolor sit amet
-						</p>
-						<p className='bio'>
-							Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem
-							ipsum dolor sit amet
-						</p>
-						<div className='bio'>
-							Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem
-						</div>
-					</div>
-				</Animator>
 			</ScrollPage>
 			<ScrollPage page={3}>
 				<Animator animation={ZoomScrollOut}>
-					<div className='section-title'>Portfolio</div>
+					<div className='section-title'>Projects</div>
 				</Animator>
 			</ScrollPage>
 			<ScrollPage page={4}>
