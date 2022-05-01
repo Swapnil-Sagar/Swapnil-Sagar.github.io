@@ -49,15 +49,34 @@
 
 /* responsive of header */
 
-@media only screen and (max-width: 600px) {
-	.name .last {
+@media only screen and (max-width: 768px) {
+	.image-container {
+		position: absolute;
+		left: -206px;
+		bottom: -460px;
+	}
+
+	.name {
 		margin-left: 10px;
 		margin-top: 40px;
+		position: absolute;
+		top: -15rem;
+		left: -8rem;
+	}
+	.name .last {
+		margin: 40px 0 0 50px;
+	}
+
+	.name h2 {
+		font-size: clamp(22px, 12vw, 121px);
 	}
 
 	.position {
-		margin-top: 80px;
-		margin-left: -20px;
+		margin-top: 100px;
+		margin-left: -15px;
+		position: relative;
+		top: -8rem;
+		left: 5rem;
 	}
 
 	.position > div {
@@ -67,7 +86,7 @@
 
 	.position h2 {
 		letter-spacing: 1px;
-		font-size: clamp(12px, 1vw, 26px);
+		font-size: clamp(12px, 4vw, 42px);
 	}
 }
 
@@ -151,7 +170,7 @@
 	object-fit: contain;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
 	.section-title {
 		font-size: 20px;
 	}
@@ -246,14 +265,33 @@
 	font-size: clamp(14px, 7vw, 120px);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
 	.details {
-		top: -100px;
-		padding: 0 30px;
-		width: 100vw;
+		padding: 0 15px;
+		top: -320px;
+		flex-direction: column;
+	}
+	.background-image-container {
+		width: 80vw;
+		max-width: 1000px;
+		bottom: -460px;
+		left: -10rem;
+		position: absolute;
+		max-height: 570px;
+	}
+
+	.details .greeting {
+		font-size: clamp(14px, 13vw, 120px);
+		position: absolute;
+		top: 10vh;
 	}
 	.details .bio {
 		width: 100%;
+		top: 25vh;
+		font-size: clamp(14px, 6.5vw, 48px);
+	}
+	.details .right {
+		top: 30vh;
 	}
 }
 

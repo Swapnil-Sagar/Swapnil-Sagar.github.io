@@ -15,7 +15,8 @@ import {
 } from 'react-scroll-motion';
 import { MouseParallaxContainer, MouseParallaxChild } from 'react-parallax-mouse';
 import './style.css';
-import headerImage from '../../img/header-image.jpg';
+import headerImage from '../../img/header-image2.jpg';
+import headerImageMb from '../../img/header-image-mb.png';
 import galaxyImage from '../../img/background.png';
 import faceIllus from '../../img/face-illus.png';
 import projectOne from '../../img/project-1.png';
@@ -25,9 +26,11 @@ import { FiMail } from 'react-icons/fi';
 import { SiInstagram } from 'react-icons/si';
 import { FiGithub } from 'react-icons/fi';
 import { TiSocialLinkedin } from 'react-icons/ti';
+import { useIsMobile } from '../../utils/utils';
 
 const Home = () => {
 	const ZoomScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
+	const isMobile = useIsMobile();
 
 	const work = [
 		{
@@ -52,13 +55,11 @@ const Home = () => {
 		win.focus();
 	};
 	return (
-		<ScrollContainer snap='proximity'>
+		<ScrollContainer snap={isMobile ? 'none' : 'proximity'}>
 			<ScrollPage page={0}>
 				<Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
 					<div className='image-container'>
-						<img src={headerImage} alt='headerImg' />
-
-						<div className='black-background'></div>
+						<img src={isMobile ? headerImageMb : headerImage} alt='headerImg' />
 					</div>
 				</Animator>
 				<Animator animation={batch(Fade(), Sticky(), MoveOut(1000, 0))}>
@@ -86,7 +87,7 @@ const Home = () => {
 				<Animator animation={batch(Fade(), Sticky(), MoveOut(1000, 500))}>
 					<div className='details'>
 						<p className='bio'>
-							Just a dev who loves to build stuffs for the web. <br />
+							I am just a dev who loves to build stuffs for the web. <br />
 							Also passionate to become a fullstacker one day.
 						</p>
 						<div className='greeting'>Hey There !</div>
