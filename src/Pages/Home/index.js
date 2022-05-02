@@ -19,9 +19,10 @@ import headerImage from '../../img/header-image2.jpg';
 import headerImageMb from '../../img/header-image-mb.png';
 import galaxyImage from '../../img/background.png';
 import faceIllus from '../../img/face-illus.png';
-import projectOne from '../../img/project-1.png';
-import projectTwo from '../../img/project-2.png';
-import projectThree from '../../img/project-3.png';
+import projectOne from '../../img/FSW.jpg';
+import projectTwo from '../../img/rm2.png';
+import projectThree from '../../img/Stockview.jpg';
+import projectFour from '../../img/expenseRm.png';
 import { FiMail } from 'react-icons/fi';
 import { SiInstagram } from 'react-icons/si';
 import { FiGithub } from 'react-icons/fi';
@@ -36,17 +37,22 @@ const Home = () => {
 		{
 			name: 'Project 1',
 			link: '#',
-			imageSrc: projectOne,
+			imageSrc: projectFour,
 		},
 		{
 			name: 'Project 2',
 			link: '#',
-			imageSrc: projectTwo,
+			imageSrc: projectFour,
 		},
 		{
 			name: 'Project 3',
 			link: '#',
-			imageSrc: projectThree,
+			imageSrc: projectFour,
+		},
+		{
+			name: 'Project 4',
+			link: '#',
+			imageSrc: projectFour,
 		},
 	];
 
@@ -55,7 +61,7 @@ const Home = () => {
 		win.focus();
 	};
 	return (
-		<ScrollContainer snap={isMobile ? 'none' : 'proximity'}>
+		<ScrollContainer snap={isMobile ? 'none' : 'mandatory'}>
 			<ScrollPage page={0}>
 				<Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
 					<div className='image-container'>
@@ -100,7 +106,6 @@ const Home = () => {
 				<Animator animation={batch(Fade(), Sticky(), MoveOut(-1650, -100))}>
 					<div className='background-image-container'>
 						<img src={faceIllus} alt='my-pic' />
-						<div className='black-background'></div>
 					</div>
 				</Animator>
 			</ScrollPage>
@@ -109,35 +114,94 @@ const Home = () => {
 					<div className='section-title'>Projects</div>
 				</Animator>
 			</ScrollPage>
-			<ScrollPage page={4}>
-				<Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
-					<div className='portfolio-content'>
-						{work?.map((work, index) => {
-							return (
-								<a href={work?.link} target='_blank' key={work?.name} rel='noreferrer'>
-									<div className='portfolio-card'>
-										<div className='project-image'>
-											<img src={work?.imageSrc} alt={work?.name} />
-										</div>
 
-										<div className='portfolio-title'>
-											<h3>{work?.name}</h3>
-										</div>
-										<div className='count'>{index}</div>
-									</div>
-								</a>
-							);
-						})}
+			<ScrollPage page={4}>
+				<div className='portfolio-content'>
+					<div className='portfolio-card'>
+						<Animator animation={batch(Fade(), Sticky(), MoveIn(200, 0), MoveOut(0, -200))}>
+							<div className='portfolio-title'>
+								<h3>Expensely</h3>
+								<p>
+									Expensely is a smart expense tracker which lets user add income or remove expense
+									from the budget using voice enabled input method.
+								</p>
+							</div>
+						</Animator>
+						<Animator animation={batch(Fade(), Sticky(), MoveIn(-500, 0), MoveOut(0, -1000))}>
+							<div className='project-image'>
+								<img src={projectFour} alt='projectFour' />
+							</div>
+						</Animator>
 					</div>
-				</Animator>
+				</div>
+			</ScrollPage>
+			<ScrollPage page={5}>
+				<div className='portfolio-content'>
+					<div className='portfolio-card'>
+						<Animator animation={batch(Fade(), Sticky(), MoveIn(500, 0), MoveOut(0, -1000))}>
+							<div className='project-image2'>
+								<img src={projectTwo} alt='projectTwo' />
+							</div>
+						</Animator>
+						<Animator animation={batch(Fade(), Sticky(), MoveIn(-200, 0), MoveOut(0, -200))}>
+							<div className='portfolio-title rtl'>
+								<h3>Expensely</h3>
+								<p>
+									Expensely is a smart expense tracker which lets user add income or remove expense
+									from the budget using voice enabled input method.
+								</p>
+							</div>
+						</Animator>
+					</div>
+				</div>
+			</ScrollPage>
+			<ScrollPage page={6}>
+				<div className='portfolio-content'>
+					<div className='portfolio-card'>
+						<Animator animation={batch(Fade(), Sticky(), MoveIn(200, 0), MoveOut(0, -200))}>
+							<div className='portfolio-title'>
+								<h3>Expensely</h3>
+								<p>
+									Expensely is a smart expense tracker which lets user add income or remove expense
+									from the budget using voice enabled input method.
+								</p>
+							</div>
+						</Animator>
+						<Animator animation={batch(Fade(), Sticky(), MoveIn(-500, 0), MoveOut(0, -1000))}>
+							<div className='project-image'>
+								<img src={projectFour} alt='projectFour' />
+							</div>
+						</Animator>
+					</div>
+				</div>
+			</ScrollPage>
+			<ScrollPage page={7}>
+				<div className='portfolio-content'>
+					<div className='portfolio-card'>
+						<Animator animation={batch(Fade(), Sticky(), MoveIn(500, 0), MoveOut(0, -1000))}>
+							<div className='project-image2'>
+								<img src={projectTwo} alt='projectTwo' />
+							</div>
+						</Animator>
+						<Animator animation={batch(Fade(), Sticky(), MoveIn(-200, 0), MoveOut(0, -200))}>
+							<div className='portfolio-title rtl'>
+								<h3>Expensely</h3>
+								<p>
+									Expensely is a smart expense tracker which lets user add income or remove expense
+									from the budget using voice enabled input method.
+								</p>
+							</div>
+						</Animator>
+					</div>
+				</div>
 			</ScrollPage>
 
-			<ScrollPage page={5}>
+			<ScrollPage page={8}>
 				<Animator animation={ZoomScrollOut}>
 					<div className='section-title contact'>Contact Me</div>
 				</Animator>
 			</ScrollPage>
-			<ScrollPage page={6}>
+			<ScrollPage page={9}>
 				<div className='contact-me'>
 					<span>
 						<Animator animation={MoveIn(-1000, 0)}>
@@ -170,7 +234,7 @@ const Home = () => {
 					</span>
 				</div>
 			</ScrollPage>
-			<ScrollPage page={7}>
+			<ScrollPage page={10}>
 				<Animator animation={batch(Fade(), Sticky())}>
 					<span className='footer'>Done</span>
 					<span className='footer'>Thank You, for your time.</span>
