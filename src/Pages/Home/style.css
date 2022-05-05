@@ -115,7 +115,7 @@
 }
 
 .portfolio-content {
-	font-family: 'Roboto', sans-serif;
+	/* font-family: 'Roboto', sans-serif; */
 	display: flex;
 	width: 100vw;
 
@@ -170,8 +170,8 @@
 
 .portfolio-title p {
 	margin-top: 15px;
-	font-family: 'Titan One', cursive;
-	font-size: clamp(14px, 3vw, 48px);
+	/* font-family: 'Titan One', cursive; */
+	font-size: clamp(14px, 2.5vw, 48px);
 }
 
 .portfolio-card {
@@ -275,7 +275,7 @@
 	position: relative;
 	top: -340px;
 	font-size: clamp(14px, 3vw, 24px);
-	font-family: 'Open Sans', sans-serif;
+	/* font-family: 'Open Sans', sans-serif; */
 }
 
 .details h2 {
@@ -285,10 +285,11 @@
 .details .bio {
 	position: relative;
 	top: 50vh;
-	width: 400px;
+	max-width: 420px;
 	font-weight: 300;
-	margin-top: 15px;
-	font-family: 'Titan One', cursive;
+	margin-top: 20px;
+	line-height: 58px;
+	/* font-family: 'Titan One', cursive; */
 	font-size: clamp(14px, 4vw, 48px);
 }
 
@@ -333,8 +334,8 @@
 	}
 }
 
-.contact::after {
-	content: 'Contact';
+.skills::after {
+	content: 'Skills';
 }
 
 span {
@@ -347,30 +348,56 @@ span > div {
 
 span p {
 	cursor: pointer;
-	font-family: 'Open Sans', sans-serif;
-	font-size: clamp(10px, 3vh, 38px);
+	/* font-family: 'Neonderthaw', cursive; */
+	font-size: clamp(16px, 3vw, 42px);
 	margin-left: 22px;
 }
 
-.contact-me {
+.skills-me {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100%;
 }
 
-.contact-me span {
+.skills-me span {
 	font-size: 40px;
 }
 
-.contact-wrapper {
+.skills-wrapper {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
+	left: 32rem;
+	text-align: center;
 }
 
-.contact-list-icons {
-	font-size: 22px;
+.subskill {
+	position: absolute;
+	font-size: clamp(16px, 1vw, 32px);
+	width: fit-content;
+	z-index: -1;
+}
+
+.subskill p {
+	color: #2b2b2b;
+}
+
+.skills-list-icon {
+	font-size: 48px;
+}
+
+.background-skills-container {
+	width: 100rem;
+	max-width: 1200px;
+	bottom: 0;
+	position: relative;
+	max-height: 800px;
+}
+
+.background-skills-container img {
+	object-fit: cover;
 }
 
 .footer {
