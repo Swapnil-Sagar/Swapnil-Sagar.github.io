@@ -404,3 +404,9 @@ span p {
 	font-family: 'Open Sans', sans-serif;
 	font-size: clamp(10px, 3vh, 38px);
 }
+
+.background-contact-container {
+	width: 100vw;
+	/* height: 100vh; */
+	object-fit: cover;
+}

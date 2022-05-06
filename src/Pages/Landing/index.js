@@ -1,7 +1,11 @@
 import { MouseParallaxChild, MouseParallaxContainer } from 'react-parallax-mouse';
 import projectOne from '../../img/project-1.png';
-import projectTwo from '../../img/project-2.png';
-import projectThree from '../../img/project-3.png';
+import face2 from '../../img/faceIllus2.png';
+import earth from '../../img/Planets/earth.png';
+import saturn from '../../img/Planets/saturn.png';
+import rock from '../../img/Planets/rock.png';
+import mid from '../../img/Planets/mid.png';
+import fore from '../../img/Planets/foreground.png';
 import galaxyImage from '../../img/background.png';
 import './style.css';
 
@@ -11,108 +15,113 @@ export default function App() {
 			<div
 				style={{
 					height: '100vh',
-					width: '100%',
-					// background: 'black',
-					color: '#fff',
-					overflow: 'hidden',
-					backgroundImage: "url('https://ibb.co/HHff25V')",
+					display: 'flex',
+					flexDirection: 'column',
+					justifyContent: 'center',
+					alignItems: 'center',
 				}}
 			>
-				<div
-					style={{
+				<MouseParallaxContainer
+					className='parallax'
+					containerStyles={{
+						width: '100%',
 						height: '100%',
-						display: 'flex',
-						flexDirection: 'column',
+						display: 'grid',
 						justifyContent: 'center',
-						backgroundImage: galaxyImage,
+						alignContent: 'center',
+						gridTemplateColumns: 'auto auto auto auto auto',
+						background: `url(${galaxyImage}) no-repeat`,
+						backgroundSize: 'cover',
 					}}
+					resetOnLeave
 				>
-					<h1 style={{ textAlign: 'center', margin: '0 0 20px 0' }}>
-						My Skills | Example for React Parallax Mouse
-					</h1>
-					<MouseParallaxContainer
-						className='parallax'
-						containerStyles={{
-							width: '100%',
-							display: 'grid',
-							gridTemplateColumns: 'auto auto auto auto auto',
+					{/* <MouseParallaxChild
+						factorX={0.02}
+						factorY={0.02}
+						updateStyles={{
+							zIndex: 1,
 						}}
-						resetOnLeave
 					>
-						<MouseParallaxChild
-							factorX={0.03}
-							factorY={0.1}
-							updateStyles={{
-								background:
-									'url(https://images.unsplash.com/photo-1611502867268-9193c5c45f09?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1171&q=80',
-								backgroundPositionY: '50%',
-								transform: 'scale(1.2)',
-								position: 'absolute',
-								filter: 'blur(4px) brightness(50%)',
-								backgroundSize: 'auto',
-								backgroundRepeat: 'repeat',
-								width: '100%',
-								height: '100%',
-								backfaceVisibility: 'hidden',
-							}}
-						/>
-						<MouseParallaxChild
-							factorX={0.05}
-							factorY={0.05}
-							updateStyles={{
-								filter: 'invert(1)',
-								display: 'flex',
-								alignItems: 'center',
-								justifyContent: 'center',
-								width: 'auto',
-								height: '100%',
-							}}
-						>
-							<img height='50%' src={projectOne} alt='' />
-						</MouseParallaxChild>
-						<MouseParallaxChild
-							factorX={0.07}
-							factorY={0.05}
-							updateStyles={{
-								filter: 'invert(1)',
-								display: 'flex',
-								alignItems: 'center',
-								justifyContent: 'center',
-								width: 'auto',
-								height: '100%',
-							}}
-						>
-							<img height='50%' src={projectOne} alt='' />
-						</MouseParallaxChild>
-						<MouseParallaxChild
-							factorX={0.09}
-							factorY={0.05}
-							updateStyles={{
-								filter: 'invert(1)',
-								display: 'flex',
-								alignItems: 'center',
-								justifyContent: 'center',
-								width: 'auto',
-								height: '100%',
-							}}
-						>
-							<img height='50%' src={projectTwo} alt='' />
-						</MouseParallaxChild>
-						<MouseParallaxChild
-							factorX={0.07}
-							factorY={0.05}
-							updateStyles={{
-								filter: 'invert(1)',
-								display: 'flex',
-								alignItems: 'center',
-								justifyContent: 'center',
-								width: 'auto',
-								height: '100%',
-							}}
-						>
-							<img height='50%' src={projectThree} alt='' />
-						</MouseParallaxChild>
-					</MouseParallaxContainer>
+						<div className='container'>
+							<form action=''>
+								<img src='https://bit.ly/2tlJLoz' />
+								<br />
+								<input type='text' value='@AmJustSam' />
+								<br />
+								<input type='password' />
+								<br />
+								<input type='submit' value='Submit' />
+							</form>
+						</div>
+					</MouseParallaxChild> */}
+					<MouseParallaxChild
+						factorX={0.01}
+						factorY={0.01}
+						updateStyles={{
+							position: 'absolute',
+							right: '70%',
+							top: '-20%',
+						}}
+					>
+						<img style={{ height: '30rem' }} src={saturn} alt='' />
+					</MouseParallaxChild>
+					<MouseParallaxChild
+						factorX={0.03}
+						factorY={0.03}
+						updateStyles={{
+							position: 'absolute',
+							left: '80%',
+							top: '30%',
+						}}
+					>
+						<img style={{ height: '16rem' }} src={earth} alt='' />
+					</MouseParallaxChild>
+					<MouseParallaxChild
+						factorX={0.06}
+						factorY={0.06}
+						updateStyles={{
+							position: 'absolute',
+							left: '60%',
+							top: '80%',
+							zIndex: 1,
+						}}
+					>
+						<img style={{ height: '6rem' }} src={rock} alt='' />
+					</MouseParallaxChild>
+					<MouseParallaxChild
+						factorX={0.02}
+						factorY={0.01}
+						updateStyles={{
+							position: 'absolute',
+
+							bottom: '-20%',
+						}}
+					>
+						<img style={{ width: '100vw' }} src={mid} alt='' />
+					</MouseParallaxChild>
+					<MouseParallaxChild
+						factorX={0.03}
+						factorY={0.03}
+						updateStyles={{
+							position: 'absolute',
+							right: '-5%',
+							bottom: '0',
+						}}
+					>
+						<img style={{ height: '50vh' }} src={fore} alt='' />
+					</MouseParallaxChild>
+				</MouseParallaxContainer>
+				<div className='container'>
+					<h1>Contact Me</h1>
+					<form action=''>
+						<img src={face2} alt='face2' />
+						<br />
+						<input type='text' value='@AmJustSam' />
+						<br />
+						<input type='password' />
+						<br />
+						<input type='submit' value='Submit' />
+					</form>
 				</div>
 			</div>
 		</>

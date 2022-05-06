@@ -32,6 +32,7 @@ import { SiInstagram } from 'react-icons/si';
 import { FiGithub } from 'react-icons/fi';
 import { TiSocialLinkedin } from 'react-icons/ti';
 import { useIsMobile } from '../../utils/utils';
+import Landing from '../Landing';
 
 const Home = () => {
 	const ZoomScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
@@ -65,7 +66,7 @@ const Home = () => {
 		win.focus();
 	};
 	return (
-		<ScrollContainer snap={isMobile ? 'none' : 'mandatory'}>
+		<ScrollContainer snap={isMobile ? 'none' : 'proximity'}>
 			<ScrollPage page={0}>
 				<Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
 					<div className='image-container'>
@@ -253,7 +254,7 @@ const Home = () => {
 								>
 									<p style={{ fontSize: '48px' }}>SSR</p>
 								</div>
-								<div style={{ right: '4rem', top: '3rem', fontSize: '20px' }} className='subskill'>
+								<div style={{ right: '8rem', top: '3rem', fontSize: '20px' }} className='subskill'>
 									<p style={{ fontSize: '28px' }}>Framework</p>
 								</div>
 							</div>
@@ -311,6 +312,12 @@ const Home = () => {
 								onClick={() => handleContactClick('https://google.com')}
 							>
 								<p>Web3</p>
+								<div
+									style={{ right: '12rem', bottom: '3rem', fontSize: '35px' }}
+									className='subskill'
+								>
+									<p style={{ fontSize: '65px' }}>ETH</p>
+								</div>
 								<div
 									style={{ left: '6rem', bottom: '2rem', fontSize: '35px' }}
 									className='subskill'
@@ -410,6 +417,13 @@ const Home = () => {
 				<Animator animation={batch(Fade(), Sticky())}>
 					<span className='footer'>Done</span>
 					<span className='footer'>Thank You, for your time.</span>
+				</Animator>
+			</ScrollPage>
+			<ScrollPage page={15}>
+				<Animator animation={batch(Fade(), Sticky())}>
+					<div className='background-contact-container'>
+						<Landing />
+					</div>
 				</Animator>
 			</ScrollPage>
 		</ScrollContainer>
