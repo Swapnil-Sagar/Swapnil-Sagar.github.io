@@ -28,9 +28,6 @@ import projectTwo from '../../img/rm2.png';
 import projectThree from '../../img/Stockview.jpg';
 import projectFour from '../../img/expenseRm.png';
 import { FiMail } from 'react-icons/fi';
-import { SiInstagram } from 'react-icons/si';
-import { FiGithub } from 'react-icons/fi';
-import { TiSocialLinkedin } from 'react-icons/ti';
 import { useIsMobile } from '../../utils/utils';
 import Landing from '../Landing';
 

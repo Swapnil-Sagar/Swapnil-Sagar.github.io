@@ -26,7 +26,8 @@ a {
 }
 
 body::-webkit-scrollbar {
-	width: 0.5em;
+	width: 0.7em;
+	cursor: pointer !important;
 }
 
 body::-webkit-scrollbar-track {

@@ -2,6 +2,9 @@
 	width: 350px;
 	height: 500px;
 	background-color: inherit;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	position: absolute;
 	overflow: hidden;
 	top: 50%;
@@ -30,8 +33,17 @@
 	margin: 1rem;
 	font-size: 38px;
 }
+
+.container p {
+	margin: 1rem;
+	font-size: 14px;
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+}
 form img {
-	width: 180px;
+	width: 200px;
 	background: #0a0023;
 	border-radius: 100%;
 	margin-bottom: 20px;
@@ -55,20 +67,24 @@ input {
 	font-weight: bold;
 	color: rgba(255, 255, 255, 0.8);
 }
-input[type='submit'] {
+button {
 	width: 200px;
 	border: 0;
 	border-radius: 8px;
 	padding-bottom: 0;
 	height: 40px;
-	background: #df2359;
+	background: #6523df;
 	color: white;
 	cursor: pointer;
+	font-size: 16px;
+	font-family: 'Druk Wide Bold', sans-serif;
+	letter-spacing: 4px;
 	margin-top: 40px;
 	transition: all 600ms ease-in-out;
 }
-input[type='submit']:hover {
-	background: #bc5388;
+button:hover {
+	background: #be3e7e;
+	letter-spacing: 6px;
 }
 span a {
 	color: rgba(255, 255, 255, 0.8);
