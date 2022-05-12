@@ -41,6 +41,8 @@
 	bottom: 0;
 	display: flex;
 	align-items: center;
+	display: flex;
+	justify-content: space-between;
 }
 form img {
 	width: 200px;
@@ -80,7 +82,7 @@ button {
 	font-family: 'Druk Wide Bold', sans-serif;
 	letter-spacing: 4px;
 	margin-top: 40px;
-	transition: all 600ms ease-in-out;
+	transition: all 400ms ease-in-out;
 }
 button:hover {
 	background: #be3e7e;
@@ -88,4 +90,29 @@ button:hover {
 }
 span a {
 	color: rgba(255, 255, 255, 0.8);
+}
+
+.icon {
+	transition: all 300ms ease-in-out;
+}
+
+#twitter:hover {
+	color: #00acee;
+	height: 5em;
+	width: 5em;
+}
+#insta:hover {
+	color: #ff397b;
+	height: 5em;
+	width: 5em;
+}
+#github:hover {
+	color: #171515;
+	height: 5em;
+	width: 5em;
+}
+#linkedin:hover {
+	color: #0e76a8;
+	height: 5em;
+	width: 5em;
 }

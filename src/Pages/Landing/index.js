@@ -40,25 +40,6 @@ export default function App() {
 					}}
 					resetOnLeave
 				>
-					{/* <MouseParallaxChild
-						factorX={0.02}
-						factorY={0.02}
-						updateStyles={{
-							zIndex: 1,
-						}}
-					>
-						<div className='container'>
-							<form action=''>
-								<img src='https://bit.ly/2tlJLoz' />
-								<br />
-								<input type='text' value='@AmJustSam' />
-								<br />
-								<input type='password' />
-								<br />
-								<input type='submit' value='Submit' />
-							</form>
-						</div>
-					</MouseParallaxChild> */}
 					<MouseParallaxChild
 						factorX={0.01}
 						factorY={0.01}
@@ -129,7 +110,12 @@ export default function App() {
 							target='_blank'
 							rel='noreferrer'
 						>
-							<SiInstagram style={{ transform: 'rotate(20deg)' }} size='4em' />
+							<SiInstagram
+								className='icon'
+								id='insta'
+								style={{ transform: 'rotate(20deg)' }}
+								size='4em'
+							/>
 						</a>
 					</MouseParallaxChild>
 					<MouseParallaxChild
@@ -142,7 +128,12 @@ export default function App() {
 						}}
 					>
 						<a href='https://www.linkedin.com/in/swapnilsagar09/' target='_blank' rel='noreferrer'>
-							<TiSocialLinkedin style={{ transform: 'rotate(-20deg)' }} size='4em' />
+							<TiSocialLinkedin
+								className='icon'
+								id='linkedin'
+								style={{ transform: 'rotate(-20deg)' }}
+								size='4em'
+							/>
 						</a>
 					</MouseParallaxChild>
 					<MouseParallaxChild
@@ -155,7 +146,7 @@ export default function App() {
 						}}
 					>
 						<a href='https://github.com/Swapnil-Sagar' target='_blank' rel='noreferrer'>
-							<FaGithub size='4em' />
+							<FaGithub className='icon' id='github' size='4em' />
 						</a>
 					</MouseParallaxChild>
 					<MouseParallaxChild
@@ -169,7 +160,7 @@ export default function App() {
 						}}
 					>
 						<a href='https://twitter.com/sagar946' target='_blank' rel='noreferrer'>
-							<FaTwitter size='4em' />
+							<FaTwitter className='icon' id='twitter' size='4em' />
 						</a>
 					</MouseParallaxChild>
 				</MouseParallaxContainer>

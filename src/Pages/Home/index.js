@@ -20,43 +20,21 @@ import { MouseParallaxContainer, MouseParallaxChild } from 'react-parallax-mouse
 import './style.css';
 import headerImage from '../../img/header-image2.jpg';
 import headerImageMb from '../../img/header-image-mb.png';
-import galaxyImage from '../../img/background.png';
 import faceIllus from '../../img/face-illus.png';
 import skillIllus from '../../img/skills_Illus.png';
-import projectOne from '../../img/FSW.jpg';
-import projectTwo from '../../img/rm2.png';
-import projectThree from '../../img/Stockview.jpg';
-import projectFour from '../../img/expenseRm.png';
-import { FiMail } from 'react-icons/fi';
+import nftie from '../../img/nftie.png';
+import kailash from '../../img/Kailash.png';
+import slacky from '../../img/slacky.png';
+import social from '../../img/social.png';
+// import dflipkart from '../../img/dflipkart.png';
+import dflipkart from '../../img/dfrm.png';
+import expensely from '../../img/exp2.png';
 import { useIsMobile } from '../../utils/utils';
 import Landing from '../Landing';
 
 const Home = () => {
 	const ZoomScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
 	const isMobile = useIsMobile();
-
-	const work = [
-		{
-			name: 'Project 1',
-			link: '#',
-			imageSrc: projectFour,
-		},
-		{
-			name: 'Project 2',
-			link: '#',
-			imageSrc: projectFour,
-		},
-		{
-			name: 'Project 3',
-			link: '#',
-			imageSrc: projectFour,
-		},
-		{
-			name: 'Project 4',
-			link: '#',
-			imageSrc: projectFour,
-		},
-	];
 
 	const handleContactClick = (url) => {
 		const win = window.open(url, '_blank');
@@ -120,18 +98,18 @@ const Home = () => {
 			<ScrollPage page={4}>
 				<div className='portfolio-content'>
 					<div className='portfolio-card'>
-						<Animator animation={batch(Fade(), Sticky(), MoveIn(200, 0), MoveOut(0, -200))}>
+						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, 200), MoveOut(0, -200))}>
 							<div className='portfolio-title'>
-								<h3>1. Expensely</h3>
+								<h3>1. Kailash</h3>
 								<p>
 									Expensely is a smart expense tracker which lets user add income or remove expense
 									from the budget using voice enabled input method.
 								</p>
 							</div>
 						</Animator>
-						<Animator animation={batch(Fade(), Sticky(), MoveIn(-500, 0), MoveOut(0, -1000))}>
+						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, 1000), MoveOut(0, -1000))}>
 							<div className='project-image'>
-								<img src={projectFour} alt='projectFour' />
+								<img src={kailash} alt='projectFour' />
 							</div>
 						</Animator>
 					</div>
@@ -141,18 +119,18 @@ const Home = () => {
 			<ScrollPage page={6}>
 				<div className='portfolio-content'>
 					<div className='portfolio-card'>
-						<Animator animation={batch(Fade(), Sticky(), MoveIn(-200, 0), MoveOut(0, -200))}>
+						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, 200), MoveOut(0, -200))}>
 							<div className='portfolio-title rtl'>
-								<h3>2. Expensely</h3>
+								<h3>2. Nftie</h3>
 								<p>
 									Expensely is a smart expense tracker which lets user add income or remove expense
 									from the budget using voice enabled input method.
 								</p>
 							</div>
 						</Animator>
-						<Animator animation={batch(Fade(), Sticky(), MoveIn(500, 0), MoveOut(0, -1000))}>
+						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, 1000), MoveOut(0, -1000))}>
 							<div className='project-image2'>
-								<img src={projectTwo} alt='projectTwo' />
+								<img src={nftie} alt='projectTwo' />
 							</div>
 						</Animator>
 					</div>
@@ -162,18 +140,18 @@ const Home = () => {
 			<ScrollPage page={8}>
 				<div className='portfolio-content'>
 					<div className='portfolio-card'>
-						<Animator animation={batch(Fade(), Sticky(), MoveIn(200, 0), MoveOut(0, -200))}>
+						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, 200), MoveOut(0, -200))}>
 							<div className='portfolio-title'>
-								<h3>3. Expensely</h3>
+								<h3>3. Social.li</h3>
 								<p>
 									Expensely is a smart expense tracker which lets user add income or remove expense
 									from the budget using voice enabled input method.
 								</p>
 							</div>
 						</Animator>
-						<Animator animation={batch(Fade(), Sticky(), MoveIn(-500, 0), MoveOut(0, -1000))}>
+						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, 1000), MoveOut(0, -1000))}>
 							<div className='project-image'>
-								<img src={projectFour} alt='projectFour' />
+								<img src={social} alt='projectFour' />
 							</div>
 						</Animator>
 					</div>
@@ -183,14 +161,56 @@ const Home = () => {
 			<ScrollPage page={10}>
 				<div className='portfolio-content'>
 					<div className='portfolio-card'>
-						<Animator animation={batch(Fade(), Sticky(), MoveIn(500, 0), MoveOut(0, -1000))}>
+						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, 1000), MoveOut(0, -1000))}>
 							<div className='project-image2'>
-								<img src={projectTwo} alt='projectTwo' />
+								<img src={dflipkart} alt='projectTwo' />
 							</div>
 						</Animator>
-						<Animator animation={batch(Fade(), Sticky(), MoveIn(-200, 0), MoveOut(0, -200))}>
+						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, 200), MoveOut(0, -200))}>
 							<div className='portfolio-title rtl'>
-								<h3>4. Expensely</h3>
+								<h3>4. D-flipkart</h3>
+								<p>
+									Expensely is a smart expense tracker which lets user add income or remove expense
+									from the budget using voice enabled input method.
+								</p>
+							</div>
+						</Animator>
+					</div>
+				</div>
+			</ScrollPage>
+			<ScrollPage page={11}></ScrollPage>
+			<ScrollPage page={12}>
+				<div className='portfolio-content'>
+					<div className='portfolio-card'>
+						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, 200), MoveOut(0, -200))}>
+							<div className='portfolio-title'>
+								<h3>5. Slacky</h3>
+								<p>
+									Expensely is a smart expense tracker which lets user add income or remove expense
+									from the budget using voice enabled input method.
+								</p>
+							</div>
+						</Animator>
+						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, 1000), MoveOut(0, -1000))}>
+							<div className='project-image'>
+								<img src={slacky} alt='projectFour' />
+							</div>
+						</Animator>
+					</div>
+				</div>
+			</ScrollPage>
+			<ScrollPage page={13}></ScrollPage>
+			<ScrollPage page={14}>
+				<div className='portfolio-content'>
+					<div className='portfolio-card'>
+						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, 1000), MoveOut(0, -1000))}>
+							<div className='project-image2'>
+								<img src={expensely} alt='projectTwo' />
+							</div>
+						</Animator>
+						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, 200), MoveOut(0, -200))}>
+							<div className='portfolio-title rtl'>
+								<h3>6. Expensely</h3>
 								<p>
 									Expensely is a smart expense tracker which lets user add income or remove expense
 									from the budget using voice enabled input method.
@@ -201,13 +221,13 @@ const Home = () => {
 				</div>
 			</ScrollPage>
 
-			<ScrollPage page={11}>
+			<ScrollPage page={15}>
 				<Animator animation={ZoomScrollOut}>
 					<div className='section-title skills'>Skills</div>
 				</Animator>
 			</ScrollPage>
 
-			<ScrollPage page={12}>
+			<ScrollPage page={16}>
 				<div className='skills-me'>
 					<span>
 						<Animator animation={batch(Fade(), Sticky())}>
@@ -399,7 +419,7 @@ const Home = () => {
 					</span>
 				</div>
 			</ScrollPage>
-			<ScrollPage page={13}>
+			<ScrollPage page={17}>
 				<div className='skills-me'>
 					<span>
 						<Animator animation={batch(Sticky(), MoveOut(-2000, 0))}>
@@ -410,13 +430,12 @@ const Home = () => {
 					</span>
 				</div>
 			</ScrollPage>
-			<ScrollPage page={14}>
+			<ScrollPage page={18}>
 				<Animator animation={batch(Fade(), Sticky())}>
-					<span className='footer'>Done</span>
 					<span className='footer'>Thank You, for your time.</span>
 				</Animator>
 			</ScrollPage>
-			<ScrollPage page={15}>
+			<ScrollPage page={19}>
 				<Animator animation={batch(Fade(), Sticky())}>
 					<div className='background-contact-container'>
 						<Landing />
