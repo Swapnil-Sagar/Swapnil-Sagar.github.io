@@ -16,7 +16,6 @@ import {
 	ZoomIn,
 	ZoomOut,
 } from 'react-scroll-motion';
-import { MouseParallaxContainer, MouseParallaxChild } from 'react-parallax-mouse';
 import './style.css';
 import headerImage from '../../img/header-image2.jpg';
 import headerImageMb from '../../img/header-image-mb.png';
@@ -31,36 +30,38 @@ import dflipkart from '../../img/dfrm.png';
 import expensely from '../../img/exp2.png';
 import { useIsMobile } from '../../utils/utils';
 import Landing from '../Landing';
+import SkillMobile from '../../components/skillsMobile';
+import SkillsWeb from '../../components/skillsWeb';
 
 const Home = () => {
 	const ZoomScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
 	const isMobile = useIsMobile();
 
-	const handleContactClick = (url) => {
-		const win = window.open(url, '_blank');
-		win.focus();
-	};
 	return (
-		<ScrollContainer snap={isMobile ? 'none' : 'proximity'}>
+		<ScrollContainer snap={isMobile ? 'none' : 'none'}>
 			<ScrollPage page={0}>
-				<Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
-					<div className='image-container'>
-						<img src={isMobile ? headerImageMb : headerImage} alt='headerImg' />
-					</div>
-				</Animator>
-				<Animator animation={batch(Fade(), Sticky(), MoveOut(1000, 0))}>
-					<div className='name'>
-						<h2 className='first'>Swapnil</h2>
-					</div>
-				</Animator>
-				<Animator animation={batch(Fade(), Sticky(), MoveOut(-1650, 0))}>
-					<div className='name'>
-						<h2 className='last'>Sagar</h2>
-					</div>
-				</Animator>
-				<Animator animation={batch(Fade(), Sticky(), MoveOut(-100, 100))}>
-					<div className='position'>
-						<h2 className='last'>Front-End Developer</h2>
+				<Animator animation={batch(Fade(), Sticky())}>
+					<div style={{ background: '#2C2A35', width: '100vw', height: '100vh' }}>
+						<Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
+							<div className='image-container'>
+								<img src={isMobile ? headerImageMb : headerImage} alt='headerImg' />
+							</div>
+						</Animator>
+						<Animator animation={batch(Fade(), Sticky(), MoveOut(1000, 0))}>
+							<div className='name'>
+								<h2 className='first'>Swapnil</h2>
+							</div>
+						</Animator>
+						<Animator animation={batch(Fade(), Sticky(), MoveOut(-1650, 0))}>
+							<div className='name'>
+								<h2 className='last'>Sagar</h2>
+							</div>
+						</Animator>
+						<Animator animation={batch(Fade(), Sticky(), MoveOut(-100, 100))}>
+							<div className='position'>
+								<h2 className='last'>Front-End Developer</h2>
+							</div>
+						</Animator>
 					</div>
 				</Animator>
 			</ScrollPage>
@@ -76,7 +77,7 @@ const Home = () => {
 							I am a dev who loves to build stuffs for the web. <br />
 							Who is also passionate to become a fullstacker one day.
 						</p>
-						<div className='greeting'>Hey There !</div>
+						<div className='greeting'>Hey There!</div>
 						<p className='bio right'>
 							I have over a year of professional developing experience and I still thrive to upgrade
 							my skills constantly.
@@ -107,7 +108,7 @@ const Home = () => {
 								</p>
 							</div>
 						</Animator>
-						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, 1000), MoveOut(0, -1000))}>
+						<Animator animation={batch(Sticky(), MoveIn(0, 1000), MoveOut(0, -1000))}>
 							<div className='project-image'>
 								<img src={kailash} alt='projectFour' />
 							</div>
@@ -122,13 +123,13 @@ const Home = () => {
 						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, 200), MoveOut(0, -200))}>
 							<div className='portfolio-title rtl'>
 								<h3>2. Nftie</h3>
-								<p>
+								<p className='text_right'>
 									Expensely is a smart expense tracker which lets user add income or remove expense
 									from the budget using voice enabled input method.
 								</p>
 							</div>
 						</Animator>
-						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, 1000), MoveOut(0, -1000))}>
+						<Animator animation={batch(Sticky(), MoveIn(0, 1000), MoveOut(0, -1000))}>
 							<div className='project-image2'>
 								<img src={nftie} alt='projectTwo' />
 							</div>
@@ -149,7 +150,7 @@ const Home = () => {
 								</p>
 							</div>
 						</Animator>
-						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, 1000), MoveOut(0, -1000))}>
+						<Animator animation={batch(Sticky(), MoveIn(0, 1000), MoveOut(0, -1000))}>
 							<div className='project-image'>
 								<img src={social} alt='projectFour' />
 							</div>
@@ -161,18 +162,18 @@ const Home = () => {
 			<ScrollPage page={10}>
 				<div className='portfolio-content'>
 					<div className='portfolio-card'>
-						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, 1000), MoveOut(0, -1000))}>
-							<div className='project-image2'>
-								<img src={dflipkart} alt='projectTwo' />
-							</div>
-						</Animator>
 						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, 200), MoveOut(0, -200))}>
 							<div className='portfolio-title rtl'>
 								<h3>4. D-flipkart</h3>
-								<p>
+								<p className='text_right'>
 									Expensely is a smart expense tracker which lets user add income or remove expense
 									from the budget using voice enabled input method.
 								</p>
+							</div>
+						</Animator>
+						<Animator animation={batch(Sticky(), MoveIn(0, 1000), MoveOut(0, -1000))}>
+							<div className='project-image2'>
+								<img src={dflipkart} alt='projectTwo' />
 							</div>
 						</Animator>
 					</div>
@@ -191,7 +192,7 @@ const Home = () => {
 								</p>
 							</div>
 						</Animator>
-						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, 1000), MoveOut(0, -1000))}>
+						<Animator animation={batch(Sticky(), MoveIn(0, 1000), MoveOut(0, -1000))}>
 							<div className='project-image'>
 								<img src={slacky} alt='projectFour' />
 							</div>
@@ -203,18 +204,18 @@ const Home = () => {
 			<ScrollPage page={14}>
 				<div className='portfolio-content'>
 					<div className='portfolio-card'>
-						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, 1000), MoveOut(0, -1000))}>
-							<div className='project-image2'>
-								<img src={expensely} alt='projectTwo' />
-							</div>
-						</Animator>
 						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, 200), MoveOut(0, -200))}>
 							<div className='portfolio-title rtl'>
 								<h3>6. Expensely</h3>
-								<p>
+								<p className='text_right'>
 									Expensely is a smart expense tracker which lets user add income or remove expense
 									from the budget using voice enabled input method.
 								</p>
+							</div>
+						</Animator>
+						<Animator animation={batch(Sticky(), MoveIn(0, 1000), MoveOut(0, -1000))}>
+							<div className='project-image2'>
+								<img src={expensely} alt='projectTwo' />
 							</div>
 						</Animator>
 					</div>
@@ -227,215 +228,14 @@ const Home = () => {
 				</Animator>
 			</ScrollPage>
 
-			<ScrollPage page={16}>
-				<div className='skills-me'>
-					<span>
-						<Animator animation={batch(Fade(), Sticky())}>
-							<div className='background-skills-container'>
-								<img src={skillIllus} alt='skillIllus' />
-							</div>
-						</Animator>
-						<Animator animation={batch(Fade(), Sticky(), MoveIn(1000, 0))}>
-							<div
-								className='skills-wrapper'
-								onClick={() => handleContactClick('https://google.com')}
-							>
-								<p>Interactive UI</p>
-								<div
-									style={{ right: '7rem', bottom: '3rem', fontSize: '20px' }}
-									className='subskill'
-								>
-									<p style={{ fontSize: '54px' }}>Spline</p>
-								</div>
-								<div style={{ left: '9rem', top: '4rem', fontSize: '20px' }} className='subskill'>
-									<p style={{ fontSize: '24px' }}>Animation</p>
-								</div>
-							</div>
-						</Animator>
-						<Animator animation={batch(Fade(), Sticky(), MoveIn(1000, -1000))}>
-							<div
-								style={{ bottom: '200px' }}
-								className='skills-wrapper'
-								onClick={() => handleContactClick('https://google.com')}
-							>
-								<p>NextJs</p>
-								<div
-									style={{ left: '8rem', bottom: '5rem', fontSize: '35px' }}
-									className='subskill'
-								>
-									<p style={{ fontSize: '24px' }}>Dynamic Routing</p>
-								</div>
-								<div
-									style={{ right: '8rem', bottom: '3rem', fontSize: '20px' }}
-									className='subskill'
-								>
-									<p style={{ fontSize: '48px' }}>SSR</p>
-								</div>
-								<div style={{ right: '8rem', top: '3rem', fontSize: '20px' }} className='subskill'>
-									<p style={{ fontSize: '28px' }}>Framework</p>
-								</div>
-							</div>
-						</Animator>
-						<Animator animation={batch(Fade(), Sticky(), MoveIn(1000, 1000))}>
-							<div
-								style={{ top: '200px' }}
-								className='skills-wrapper'
-								onClick={() => handleContactClick('https://google.com')}
-							>
-								<p>
-									Testing <br /> Debugging
-								</p>
-								<div
-									style={{ right: '5rem', bottom: '7rem', fontSize: '20px' }}
-									className='subskill'
-								>
-									<p style={{ fontSize: '34px' }}>Unit Testing</p>
-								</div>
-								<div style={{ left: '9rem', top: '6rem', fontSize: '20px' }} className='subskill'>
-									<p style={{ fontSize: '54px' }}>Jest</p>
-								</div>
-							</div>
-						</Animator>
-						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, 1000))}>
-							<div
-								style={{ top: '260px', left: '0' }}
-								className='skills-wrapper'
-								onClick={() => handleContactClick('https://google.com')}
-							>
-								<p>
-									Responsive <br /> Design
-								</p>
-								<div
-									style={{ right: '10rem', bottom: '7rem', fontSize: '20px' }}
-									className='subskill'
-								>
-									<p style={{ fontSize: '24px' }}>Media Queries</p>
-								</div>
-								<div style={{ right: '20rem', top: '3rem', fontSize: '20px' }} className='subskill'>
-									<p style={{ fontSize: '38px' }}>Flex</p>
-								</div>
-								<div
-									style={{ left: '17rem', bottom: '1rem', fontSize: '20px' }}
-									className='subskill'
-								>
-									<p style={{ fontSize: '54px' }}>Grid</p>
-								</div>
-							</div>
-						</Animator>
-						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, -1000))}>
-							<div
-								style={{ bottom: '270px', left: '0' }}
-								className='skills-wrapper'
-								onClick={() => handleContactClick('https://google.com')}
-							>
-								<p>Web3</p>
-								<div
-									style={{ right: '12rem', bottom: '3rem', fontSize: '35px' }}
-									className='subskill'
-								>
-									<p style={{ fontSize: '65px' }}>ETH</p>
-								</div>
-								<div
-									style={{ left: '6rem', bottom: '2rem', fontSize: '35px' }}
-									className='subskill'
-								>
-									<p style={{ fontSize: '35px' }}>Smart Contract</p>
-								</div>
-								<div style={{ right: '4rem', top: '3rem', fontSize: '20px' }} className='subskill'>
-									<p style={{ fontSize: '28px' }}>Metamask</p>
-								</div>
-							</div>
-						</Animator>
-						<Animator animation={batch(Fade(), Sticky(), MoveIn(-1000, -1000))}>
-							<div
-								style={{ bottom: '200px', left: '-500px' }}
-								className='skills-wrapper'
-								onClick={() => handleContactClick('https://google.com')}
-							>
-								<p>React</p>
-								<div
-									style={{ left: '6rem', bottom: '2rem', fontSize: '35px' }}
-									className='subskill'
-								>
-									<p style={{ fontSize: '48px' }}>Es6</p>
-								</div>
-								<div
-									style={{ right: '8rem', bottom: '4rem', fontSize: '20px' }}
-									className='subskill'
-								>
-									<p style={{ fontSize: '24px' }}>Styled Components</p>
-								</div>
-								<div style={{ right: '4rem', top: '3rem', fontSize: '20px' }} className='subskill'>
-									<p style={{ fontSize: '28px' }}>Redux</p>
-								</div>
-							</div>
-						</Animator>
-						<Animator animation={batch(Fade(), Sticky(), MoveIn(-1000, 0))}>
-							<div
-								style={{ bottom: '0', left: '-500px' }}
-								className='skills-wrapper'
-								onClick={() => handleContactClick('https://google.com')}
-							>
-								<p>Functional Programming</p>
-								<div
-									style={{ left: '6rem', bottom: '6rem', fontSize: '35px' }}
-									className='subskill'
-								>
-									<p style={{ fontSize: '44px' }}>C++</p>
-								</div>
-								<div
-									style={{ right: '10rem', bottom: '7rem', fontSize: '20px' }}
-									className='subskill'
-								>
-									<p style={{ fontSize: '54px' }}>DSA</p>
-								</div>
-								<div style={{ right: '5rem', top: '5rem', fontSize: '20px' }} className='subskill'>
-									<p style={{ fontSize: '64px' }}>OOPS</p>
-								</div>
-								<div style={{ left: '9rem', top: '8rem', fontSize: '20px' }} className='subskill'>
-									<p style={{ fontSize: '28px' }}>JS</p>
-								</div>
-							</div>
-						</Animator>
+			{!isMobile ? <SkillsWeb /> : <SkillMobile />}
 
-						<Animator animation={batch(Fade(), Sticky(), MoveIn(-1000, 1000))}>
-							<div
-								style={{ top: '200px', left: '-500px' }}
-								className='skills-wrapper'
-								onClick={() => handleContactClick('https://google.com')}
-							>
-								<p>React Native</p>
-								<div style={{ right: '8rem', top: '4rem', fontSize: '20px' }} className='subskill'>
-									<p style={{ fontSize: '44px' }}>Android</p>
-								</div>
-								<div
-									style={{ left: '9rem', bottom: '1rem', fontSize: '20px' }}
-									className='subskill'
-								>
-									<p style={{ fontSize: '64px' }}>IOS</p>
-								</div>
-							</div>
-						</Animator>
-					</span>
-				</div>
-			</ScrollPage>
-			<ScrollPage page={17}>
-				<div className='skills-me'>
-					<span>
-						<Animator animation={batch(Sticky(), MoveOut(-2000, 0))}>
-							<div className='background-skills-container'>
-								<img src={skillIllus} alt='skillIllus' />
-							</div>
-						</Animator>
-					</span>
-				</div>
-			</ScrollPage>
-			<ScrollPage page={18}>
+			<ScrollPage page={20}>
 				<Animator animation={batch(Fade(), Sticky())}>
 					<span className='footer'>Thank You, for your time.</span>
 				</Animator>
 			</ScrollPage>
-			<ScrollPage page={19}>
+			<ScrollPage page={21}>
 				<Animator animation={batch(Fade(), Sticky())}>
 					<div className='background-contact-container'>
 						<Landing />

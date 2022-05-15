@@ -56,9 +56,14 @@
 
 @media only screen and (max-width: 768px) {
 	.image-container {
-		position: absolute;
-		left: -206px;
-		bottom: -460px;
+		height: 100vh;
+		position: relative;
+		left: 0;
+		bottom: -68vh;
+	}
+
+	.image-container img {
+		height: auto;
 	}
 
 	.name {
@@ -69,7 +74,7 @@
 		left: -8rem;
 	}
 	.name .last {
-		margin: 40px 0 0 50px;
+		margin: 50px 0 0 50px;
 	}
 
 	.name h2 {
@@ -80,8 +85,8 @@
 		margin-top: 100px;
 		margin-left: -15px;
 		position: relative;
-		top: -8rem;
-		left: 5rem;
+		top: -7.5rem;
+		left: 25%;
 	}
 
 	.position > div {
@@ -90,7 +95,7 @@
 	}
 
 	.position h2 {
-		letter-spacing: 1px;
+		letter-spacing: 2px;
 		font-size: clamp(12px, 4vw, 42px);
 	}
 }
@@ -144,6 +149,13 @@
 	z-index: 1;
 }
 
+:root {
+	--primary: #dff6ff;
+	--secondary: #5d8bf4;
+	--third: #2d31fa;
+	--fourth: #051367;
+}
+
 .portfolio-title {
 	display: flex;
 	flex-direction: column;
@@ -151,6 +163,13 @@
 	align-items: center;
 	position: relative;
 	right: 300px;
+	padding: 5rem;
+	/* animation: anim 30s infinite;
+	border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;
+	box-shadow: 0 -2vmin 4vmin var(--primary) inset, 0 1vmin 4vmin var(--secondary) inset,
+		0 -2vmin 7vmin var(--fourth) inset;
+
+	filter: drop-shadow(2vmin -2vmin 15vmin rgb(0, 0, 255)); */
 }
 
 .rtl {
@@ -170,6 +189,7 @@
 
 .portfolio-title p {
 	margin-top: 15px;
+	text-align: center;
 	/* font-family: 'Titan One', cursive; */
 	font-size: clamp(14px, 2.5vw, 48px);
 }
@@ -186,6 +206,12 @@
 	height: auto;
 	display: flex;
 	left: 500px;
+	animation: anim 30s infinite;
+	border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;
+	box-shadow: 0 -2vmin 4vmin var(--primary) inset, 0 1vmin 4vmin var(--secondary) inset,
+		0 -2vmin 7vmin var(--fourth) inset;
+
+	filter: drop-shadow(2vmin -2vmin 10vmin rgb(0, 0, 255));
 }
 
 .project-image img {
@@ -200,6 +226,11 @@
 	height: auto;
 	display: flex;
 	right: 500px;
+	animation: anim 30s infinite;
+	border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;
+	box-shadow: 0 -2vmin 4vmin var(--primary) inset, 0 1vmin 4vmin var(--secondary) inset,
+		0 -2vmin 7vmin var(--fourth) inset;
+	filter: drop-shadow(2vmin -2vmin 10vmin rgb(0, 0, 255));
 }
 
 .project-image2 img {
@@ -234,20 +265,59 @@
 		left: -5px;
 	}
 
+	.portfolio-title {
+		height: 100vh;
+		position: relative;
+		right: 0;
+		padding: 0;
+		justify-content: flex-start;
+	}
+
 	.portfolio-title h3 {
 		color: white;
-		font-size: clamp(16px, 2vw, 25px);
+		font-size: clamp(18px, 15vw, 240px);
 		letter-spacing: 1px;
 		margin-top: 10px;
+		min-width: max-content;
+	}
+
+	.portfolio-title p {
+		margin-top: 50px;
+		font-size: clamp(14px, 5vw, 120px);
 	}
 
 	.project-image {
-		height: 80px;
+		position: initial;
+		height: auto;
+		margin-top: 20rem;
+		/* animation: none; */
+		/* border-radius: none; */
+		/* box-shadow: none; */
+
+		/* filter: none; */
+	}
+
+	.project-image2 {
+		position: initial;
+		height: auto;
+		margin-top: 20rem;
+		/* animation: none; */
+		/* border-radius: none; */
+		/* box-shadow: none; */
+		/* filter: none; */
 	}
 
 	.project-image img {
-		width: 120px;
-		height: 80px;
+		width: auto;
+		height: 17rem;
+	}
+	.project-image2 img {
+		width: auto;
+		height: 17rem;
+	}
+
+	.rtl {
+		left: auto;
 	}
 }
 
@@ -261,6 +331,11 @@
 	bottom: 0;
 	position: relative;
 	max-height: 570px;
+	/* animation: anim 30s infinite; */
+	/* border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%; */
+	/* box-shadow: 0 -2vmin 4vmin var(--primary) inset, 0 1vmin 4vmin var(--secondary) inset,
+		0 -2vmin 7vmin var(--fourth) inset; */
+	filter: drop-shadow(2vmin -2vmin 12vmin rgb(0, 0, 255));
 }
 
 .background-image-container img {
@@ -297,37 +372,44 @@
 	text-align: right;
 }
 
+.text_right {
+	text-align: right;
+}
+
 .details .greeting {
 	position: relative;
 	top: 60px;
 	font-family: 'Neonderthaw', cursive;
-	font-size: clamp(14px, 7vw, 120px);
+	font-size: clamp(14px, 8vw, 150px);
 }
 
 @media only screen and (max-width: 768px) {
 	.details {
 		padding: 0 15px;
-		top: -320px;
+		top: -300px;
 		flex-direction: column;
 	}
 	.background-image-container {
-		width: 80vw;
+		width: clamp(70vw, 75vw, 80vw);
 		max-width: 1000px;
-		bottom: -460px;
-		left: -10rem;
-		position: absolute;
-		max-height: 570px;
+		bottom: -20em;
+		left: 0;
+		position: relative;
+		max-height: 580px;
 	}
 
 	.details .greeting {
 		font-size: clamp(14px, 13vw, 120px);
-		position: absolute;
-		top: 10vh;
+		position: relative;
+		top: 0;
 	}
 	.details .bio {
+		position: relative;
 		width: 100%;
-		top: 25vh;
-		font-size: clamp(14px, 6.5vw, 48px);
+
+		top: 17rem;
+		line-height: 32px;
+		font-size: clamp(14px, 5vw, 48px);
 	}
 	.details .right {
 		top: 30vh;
@@ -400,6 +482,61 @@ span p {
 	object-fit: cover;
 }
 
+@media only screen and (max-width: 768px) {
+	.background-skills-container {
+		bottom: -18rem;
+		right: 3rem;
+		position: relative;
+		max-width: 600px;
+	}
+
+	.skills-wrapper {
+		left: auto !important;
+	}
+	/* #react {
+		bottom: 300px !important;
+	}
+
+	#web3 {
+		bottom: 240px !important;
+	}
+	#nextjs {
+		bottom: 180px !important;
+	}
+
+	#interactive {
+		bottom: 120px !important;
+	}
+
+	#native {
+		bottom: 60px !important;
+	}
+
+	#functional {
+		top: 0px !important;
+	}
+	#testing {
+		top: 75px !important;
+	}
+
+	#responsive {
+		top: 150px !important;
+	}
+
+	.sub1 {
+		font-size: 36px !important;
+	}
+	.sub2 {
+		font-size: 24px !important;
+	}
+	.sub3 {
+		font-size: 18px !important;
+	}
+	.subskill p {
+		font-size: 24px !important;
+	} */
+}
+
 .footer {
 	font-family: 'Open Sans', sans-serif;
 	font-size: clamp(10px, 3vh, 38px);
@@ -409,4 +546,57 @@ span p {
 	width: 100vw;
 	/* height: 100vh; */
 	object-fit: cover;
+}
+
+/* ------------------- Keyframe Animation ---------------------- */
+
+@keyframes anim {
+	0%,
+	100% {
+		border-radius: 30% 70% 70% 30% / 30% 52% 48% 70%;
+		box-shadow: 0 -2vmin 4vmin var(--primary) inset, 0 -4vmin 4vmin var(--secondary) inset,
+			0 -2vmin 7vmin var(--fourth) inset;
+	}
+
+	10% {
+		border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
+	}
+
+	20% {
+		border-radius: 67% 33% 47% 53% / 37% 20% 80% 63%;
+	}
+
+	30% {
+		border-radius: 39% 61% 47% 53% / 37% 40% 60% 63%;
+		box-shadow: 0 -4vmin 8vmin var(--fourth) inset, -1vmin -2vmin 6vmin var(--primary) inset,
+			-1vmin -2vmin 4vmin var(--secondary) inset, 1vmin 4vmin 8vmin var(--fourth) inset;
+	}
+
+	40% {
+		border-radius: 39% 61% 82% 18% / 74% 40% 60% 26%;
+	}
+
+	50% {
+		border-radius: 100%;
+		box-shadow: 0 4vmin 16vmin var(--fourth) inset, 0 2vmin 5vmin var(--primary) inset,
+			0 4vmin 4vmin var(--secondary) inset, 0 6vmin 8vmin var(--fourth) inset;
+	}
+
+	60% {
+		border-radius: 50% 50% 53% 47% / 72% 69% 31% 28%;
+	}
+
+	70% {
+		border-radius: 50% 50% 53% 47% / 26% 22% 78% 74%;
+		box-shadow: 1vmin 1vmin 8vmin var(--primary) inset, 2vmin -1vmin 4vmin var(--secondary) inset,
+			-1vmin -1vmin 16vmin var(--fourth) inset;
+	}
+
+	80% {
+		border-radius: 50% 50% 53% 47% / 26% 69% 31% 74%;
+	}
+
+	90% {
+		border-radius: 20% 80% 20% 80% / 20% 80% 20% 80%;
+	}
 }
