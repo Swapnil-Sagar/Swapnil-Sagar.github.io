@@ -290,21 +290,18 @@
 		position: initial;
 		height: auto;
 		margin-top: 20rem;
-		/* animation: none; */
-		/* border-radius: none; */
-		/* box-shadow: none; */
 
-		/* filter: none; */
+		animation: none;
+		border-radius: none;
+		box-shadow: none;
+		filter: none;
 	}
 
 	.project-image2 {
 		position: initial;
 		height: auto;
 		margin-top: 20rem;
-		/* animation: none; */
-		/* border-radius: none; */
-		/* box-shadow: none; */
-		/* filter: none; */
+		filter: drop-shadow(2vmin -2vmin 5vmin rgb(0, 0, 255));
 	}
 
 	.project-image img {
@@ -493,48 +490,10 @@ span p {
 	.skills-wrapper {
 		left: auto !important;
 	}
-	/* #react {
-		bottom: 300px !important;
-	}
 
-	#web3 {
-		bottom: 240px !important;
+	.skills-wrapper h2 {
+		font-size: clamp(1.5rem, 2rem, 2.5rem);
 	}
-	#nextjs {
-		bottom: 180px !important;
-	}
-
-	#interactive {
-		bottom: 120px !important;
-	}
-
-	#native {
-		bottom: 60px !important;
-	}
-
-	#functional {
-		top: 0px !important;
-	}
-	#testing {
-		top: 75px !important;
-	}
-
-	#responsive {
-		top: 150px !important;
-	}
-
-	.sub1 {
-		font-size: 36px !important;
-	}
-	.sub2 {
-		font-size: 24px !important;
-	}
-	.sub3 {
-		font-size: 18px !important;
-	}
-	.subskill p {
-		font-size: 24px !important;
-	} */
 }
 
 .footer {

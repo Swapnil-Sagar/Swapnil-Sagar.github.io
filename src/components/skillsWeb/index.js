@@ -557,7 +557,7 @@ const SkillsWeb = () => {
 								</div>
 							</div>
 						</Animator>
-						<Animator animation={batch(Sticky(), MoveOut(-2000, 0))}>
+						<Animator animation={batch(Fade(), Sticky())}>
 							<div className='background-skills-container'>
 								<img src={skillIllus} alt='skillIllus' />
 							</div>

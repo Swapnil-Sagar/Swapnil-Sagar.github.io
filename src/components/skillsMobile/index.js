@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css';
 import {
 	ScrollContainer,
 	ScrollPage,
@@ -36,70 +37,52 @@ const SkillsMobile = () => {
 							</div>
 						</Animator>
 						<Animator animation={FadeUp}>
-							<div style={{ bottom: '200px' }} className='skills-wrapper' id='react'>
-								<p>React</p>
-								<div
-									style={{ left: '6rem', bottom: '2rem', fontSize: '35px' }}
-									className='subskill 1'
-								>
-									<p className='sub1' style={{ fontSize: '48px' }}>
+							<div style={{ bottom: '250px' }} className='skills-wrapper' id='react'>
+								<h2>React</h2>
+								<div style={{ left: '30vw', bottom: '2rem' }} className='subskill 1'>
+									<p className='sub1' style={{ fontSize: '38px' }}>
 										Es6
 									</p>
 								</div>
-								<div
-									style={{ right: '8rem', bottom: '4rem', fontSize: '20px' }}
-									className='subskill 2'
-								>
-									<p className='sub2' style={{ fontSize: '24px' }}>
+								<div style={{ right: '20vw', bottom: '5rem' }} className='subskill 2'>
+									<p className='sub2' style={{ fontSize: '18px' }}>
 										Styled Components
 									</p>
 								</div>
-								<div
-									style={{ right: '4rem', top: '3rem', fontSize: '20px' }}
-									className='subskill 1'
-								>
-									<p className='sub3' style={{ fontSize: '28px' }}>
+								<div style={{ right: '30vw', top: '2rem' }} className='subskill 1'>
+									<p className='sub3' style={{ fontSize: '24px' }}>
 										Redux
 									</p>
 								</div>
 							</div>
 						</Animator>
 						<Animator animation={FadeUp}>
-							<div style={{ bottom: '100px' }} className='skills-wrapper' id='web3'>
-								<p>Web3</p>
-								<div
-									style={{ right: '12rem', bottom: '3rem', fontSize: '35px' }}
-									className='subskill'
-								>
-									<p style={{ fontSize: '65px' }}>ETH</p>
+							<div style={{ bottom: '125px' }} className='skills-wrapper' id='web3'>
+								<h2>Web3</h2>
+								<div style={{ right: '35vw', bottom: '3rem' }} className='subskill'>
+									<p style={{ fontSize: '38px' }}>ETH</p>
 								</div>
-								<div
-									style={{ left: '6rem', bottom: '2rem', fontSize: '35px' }}
-									className='subskill'
-								>
-									<p style={{ fontSize: '35px' }}>Smart Contract</p>
+								<div style={{ left: '25vw', bottom: '2rem' }} className='subskill'>
+									<p style={{ fontSize: '18px' }}>Smart Contract</p>
 								</div>
-								<div style={{ right: '4rem', top: '3rem', fontSize: '20px' }} className='subskill'>
-									<p style={{ fontSize: '28px' }}>Metamask</p>
+								<div style={{ right: '10vw', top: '2rem' }} className='subskill'>
+									<p style={{ fontSize: '24px' }}>Metamask</p>
 								</div>
 							</div>
 						</Animator>
 						<Animator animation={FadeUp}>
 							<div style={{ bottom: '0' }} className='skills-wrapper' id='nextjs'>
-								<p>NextJs</p>
+								<h2>NextJs</h2>
 								<div
-									style={{ left: '8rem', bottom: '5rem', fontSize: '35px' }}
+									style={{ left: '20vw', bottom: '2rem', fontSize: '35px' }}
 									className='subskill'
 								>
 									<p style={{ fontSize: '24px' }}>Dynamic Routing</p>
 								</div>
-								<div
-									style={{ right: '8rem', bottom: '3rem', fontSize: '20px' }}
-									className='subskill'
-								>
+								<div style={{ right: '25vw', top: '2rem', fontSize: '20px' }} className='subskill'>
 									<p style={{ fontSize: '48px' }}>SSR</p>
 								</div>
-								<div style={{ right: '8rem', top: '3rem', fontSize: '20px' }} className='subskill'>
+								<div style={{ left: '0', top: '6rem', fontSize: '20px' }} className='subskill'>
 									<p style={{ fontSize: '28px' }}>Framework</p>
 								</div>
 							</div>
@@ -116,52 +99,40 @@ const SkillsMobile = () => {
 							</div>
 						</Animator>
 						<Animator animation={FadeUp}>
-							<div style={{ bottom: '200px' }} className='skills-wrapper' id='interactive'>
-								<p>Interactive UI</p>
-								<div
-									style={{ right: '7rem', bottom: '3rem', fontSize: '20px' }}
-									className='subskill'
-								>
+							<div style={{ bottom: '250px' }} className='skills-wrapper' id='interactive'>
+								<h2>Interactive UI</h2>
+								<div style={{ right: '20vw', bottom: '4rem' }} className='subskill'>
 									<p style={{ fontSize: '54px' }}>Spline</p>
 								</div>
-								<div style={{ left: '9rem', top: '4rem', fontSize: '20px' }} className='subskill'>
+								<div style={{ left: '25vw', top: '5rem', fontSize: '20px' }} className='subskill'>
 									<p style={{ fontSize: '24px' }}>Animation</p>
 								</div>
 							</div>
 						</Animator>
 						<Animator animation={FadeUp}>
-							<div style={{ bottom: '100px' }} className='skills-wrapper' id='responsive'>
-								<p>
+							<div style={{ bottom: '75px' }} className='skills-wrapper' id='responsive'>
+								<h2>
 									Responsive <br /> Design
-								</p>
-								<div
-									style={{ right: '10rem', bottom: '7rem', fontSize: '20px' }}
-									className='subskill'
-								>
-									<p style={{ fontSize: '24px' }}>Media Queries</p>
+								</h2>
+								<div style={{ right: '35vw', bottom: '5rem' }} className='subskill'>
+									<p style={{ fontSize: '18px' }}>Media Queries</p>
 								</div>
-								<div style={{ right: '20rem', top: '3rem', fontSize: '20px' }} className='subskill'>
+								<div style={{ right: '45vw', top: '4rem' }} className='subskill'>
 									<p style={{ fontSize: '38px' }}>Flex</p>
 								</div>
-								<div
-									style={{ left: '17rem', bottom: '1rem', fontSize: '20px' }}
-									className='subskill'
-								>
+								<div style={{ left: '35vw', top: '5rem' }} className='subskill'>
 									<p style={{ fontSize: '54px' }}>Grid</p>
 								</div>
 							</div>
 						</Animator>
 						<Animator animation={FadeUp}>
-							<div style={{ bottom: '0' }} className='skills-wrapper' id='native'>
-								<p>React Native</p>
-								<div style={{ right: '8rem', top: '4rem', fontSize: '20px' }} className='subskill'>
-									<p style={{ fontSize: '44px' }}>Android</p>
+							<div style={{ top: '100px' }} className='skills-wrapper' id='native'>
+								<h2>React Native</h2>
+								<div style={{ left: '10vw', top: '4rem' }} className='subskill'>
+									<p style={{ fontSize: '38px' }}>Android</p>
 								</div>
-								<div
-									style={{ left: '9rem', bottom: '1rem', fontSize: '20px' }}
-									className='subskill'
-								>
-									<p style={{ fontSize: '64px' }}>IOS</p>
+								<div style={{ right: '45vw', bottom: '4rem' }} className='subskill'>
+									<p style={{ fontSize: '34px' }}>IOS</p>
 								</div>
 							</div>
 						</Animator>
@@ -178,42 +149,33 @@ const SkillsMobile = () => {
 						</Animator>
 
 						<Animator animation={FadeUp}>
-							<div style={{ bottom: '150px' }} className='skills-wrapper' id='testing'>
-								<p>
+							<div style={{ bottom: '200px' }} className='skills-wrapper' id='testing'>
+								<h2>
 									Testing <br /> Debugging
-								</p>
-								<div
-									style={{ right: '5rem', bottom: '7rem', fontSize: '20px' }}
-									className='subskill'
-								>
+								</h2>
+								<div style={{ right: '25vw', bottom: '5rem' }} className='subskill'>
 									<p style={{ fontSize: '34px' }}>Unit Testing</p>
 								</div>
-								<div style={{ left: '9rem', top: '6rem', fontSize: '20px' }} className='subskill'>
+								<div style={{ left: '35vw', top: '4rem' }} className='subskill'>
 									<p style={{ fontSize: '54px' }}>Jest</p>
 								</div>
 							</div>
 						</Animator>
 
 						<Animator animation={FadeUp}>
-							<div style={{ bottom: '50px' }} className='skills-wrapper' id='functional'>
-								<p>Functional Programming</p>
-								<div
-									style={{ left: '6rem', bottom: '6rem', fontSize: '35px' }}
-									className='subskill'
-								>
+							<div style={{ top: '0' }} className='skills-wrapper' id='functional'>
+								<h2>Functional Programming</h2>
+								<div style={{ left: '45vw', bottom: '4rem' }} className='subskill'>
 									<p style={{ fontSize: '44px' }}>C++</p>
 								</div>
-								<div
-									style={{ right: '10rem', bottom: '7rem', fontSize: '20px' }}
-									className='subskill'
-								>
+								<div style={{ right: '50vw', bottom: '5rem' }} className='subskill'>
 									<p style={{ fontSize: '54px' }}>DSA</p>
 								</div>
-								<div style={{ right: '5rem', top: '5rem', fontSize: '20px' }} className='subskill'>
-									<p style={{ fontSize: '64px' }}>OOPS</p>
+								<div style={{ right: '5rem', top: '5rem' }} className='subskill'>
+									<p style={{ fontSize: '34px' }}>OOPS</p>
 								</div>
-								<div style={{ left: '9rem', top: '8rem', fontSize: '20px' }} className='subskill'>
-									<p style={{ fontSize: '28px' }}>JS</p>
+								<div style={{ left: '9rem', top: '8rem' }} className='subskill'>
+									<p style={{ fontSize: '64px' }}>JS</p>
 								</div>
 							</div>
 						</Animator>

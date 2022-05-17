@@ -10,11 +10,12 @@ import galaxyImage from '../../img/background.png';
 import { SiInstagram } from 'react-icons/si';
 import { FaGithub, FaTwitter } from 'react-icons/fa';
 import { TiSocialLinkedin } from 'react-icons/ti';
-import { BsFileEarmarkPerson } from 'react-icons/bs';
 import { CgHeart } from 'react-icons/cg';
+import { useIsMobile } from '../../utils/utils';
 import './style.css';
 
 export default function App() {
+	const isMobile = useIsMobile();
 	return (
 		<>
 			<div
@@ -40,46 +41,20 @@ export default function App() {
 					}}
 					resetOnLeave
 				>
-					<MouseParallaxChild
-						factorX={0.01}
-						factorY={0.01}
-						updateStyles={{
-							position: 'absolute',
-							right: '70%',
-							top: '-20%',
-						}}
-					>
-						<img style={{ height: '30rem' }} src={saturn} alt='' />
+					<MouseParallaxChild factorX={0.01} factorY={0.01} className='saturn_parallax'>
+						<img src={saturn} alt='' />
 					</MouseParallaxChild>
-					<MouseParallaxChild
-						factorX={0.03}
-						factorY={0.03}
-						updateStyles={{
-							position: 'absolute',
-							left: '80%',
-							top: '30%',
-						}}
-					>
-						<img style={{ height: '16rem' }} src={earth} alt='' />
+					<MouseParallaxChild factorX={0.03} factorY={0.03} className='earth_parallax'>
+						<img src={earth} alt='' />
 					</MouseParallaxChild>
-					<MouseParallaxChild
-						factorX={0.06}
-						factorY={0.06}
-						updateStyles={{
-							position: 'absolute',
-							left: '60%',
-							top: '80%',
-							zIndex: 1,
-						}}
-					>
-						<img style={{ height: '6rem' }} src={rock} alt='' />
+					<MouseParallaxChild factorX={0.06} factorY={0.06} className='rock_parallax'>
+						<img style={{ height: isMobile ? '2.5em ' : '6em' }} src={rock} alt='' />
 					</MouseParallaxChild>
 					<MouseParallaxChild
 						factorX={0.02}
 						factorY={0.01}
 						updateStyles={{
 							position: 'absolute',
-
 							bottom: '-20%',
 						}}
 					>
@@ -96,15 +71,7 @@ export default function App() {
 					>
 						<img style={{ height: '50vh' }} src={fore} alt='' />
 					</MouseParallaxChild>
-					<MouseParallaxChild
-						factorX={0.06}
-						factorY={0.03}
-						updateStyles={{
-							position: 'absolute',
-							top: '10%',
-							right: '10%',
-						}}
-					>
+					<MouseParallaxChild factorX={0.06} factorY={0.03} className='insta_parallax'>
 						<a
 							href='https://www.instagram.com/_swapnilsagar_/?hl=en'
 							target='_blank'
@@ -114,53 +81,28 @@ export default function App() {
 								className='icon'
 								id='insta'
 								style={{ transform: 'rotate(20deg)' }}
-								size='4em'
+								size={isMobile ? '2.5em ' : '4em'}
 							/>
 						</a>
 					</MouseParallaxChild>
-					<MouseParallaxChild
-						factorX={0.06}
-						factorY={0.03}
-						updateStyles={{
-							position: 'absolute',
-							top: '40%',
-							left: '25%',
-						}}
-					>
+					<MouseParallaxChild factorX={0.06} factorY={0.03} className='linkedin_parallax'>
 						<a href='https://www.linkedin.com/in/swapnilsagar09/' target='_blank' rel='noreferrer'>
 							<TiSocialLinkedin
 								className='icon'
 								id='linkedin'
 								style={{ transform: 'rotate(-20deg)' }}
-								size='4em'
+								size={isMobile ? '3.2em ' : '4em'}
 							/>
 						</a>
 					</MouseParallaxChild>
-					<MouseParallaxChild
-						factorX={0.06}
-						factorY={0.03}
-						updateStyles={{
-							position: 'absolute',
-							top: '85%',
-							right: '20%',
-						}}
-					>
+					<MouseParallaxChild factorX={0.06} factorY={0.03} className='github_parallax'>
 						<a href='https://github.com/Swapnil-Sagar' target='_blank' rel='noreferrer'>
-							<FaGithub className='icon' id='github' size='4em' />
+							<FaGithub className='icon' id='github' size={isMobile ? '2.5em ' : '4em'} />
 						</a>
 					</MouseParallaxChild>
-					<MouseParallaxChild
-						factorX={0.06}
-						factorY={0.03}
-						updateStyles={{
-							position: 'absolute',
-							top: '80%',
-							left: '35%',
-							zIndex: 1,
-						}}
-					>
+					<MouseParallaxChild factorX={0.06} factorY={0.03} className='twitter_parallax'>
 						<a href='https://twitter.com/sagar946' target='_blank' rel='noreferrer'>
-							<FaTwitter className='icon' id='twitter' size='4em' />
+							<FaTwitter className='icon' id='twitter' size={isMobile ? '2.5em ' : '4em'} />
 						</a>
 					</MouseParallaxChild>
 				</MouseParallaxContainer>
