@@ -1,5 +1,4 @@
 import { MouseParallaxChild, MouseParallaxContainer } from 'react-parallax-mouse';
-import projectOne from '../../img/project-1.png';
 import face2 from '../../img/faceIllus2.png';
 import earth from '../../img/Planets/earth.png';
 import saturn from '../../img/Planets/saturn.png';
@@ -111,9 +110,9 @@ export default function App() {
 					<form action=''>
 						<img src={face2} alt='face2' />
 
-						<a href='mailto:swapnilsagar09@gmail.com'>
-							<button>SEND MAIL</button>
-						</a>
+						<button>
+							<a href='mailto:swapnilsagar09@gmail.com'>MAIL ME</a>
+						</button>
 					</form>
 					<p>
 						Made with <CgHeart style={{ margin: '0 8px' }} color='red' size='1.5em' /> by Swapnil

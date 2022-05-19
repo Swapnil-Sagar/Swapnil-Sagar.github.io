@@ -26,7 +26,7 @@ const SmoothScroll = ({ children }) => {
 	const setBodyHeight = () => {
 		document.body.style.height = `${
 			scrollingContainerRef.current.getBoundingClientRect().height
-		}px`;
+		} vh`;
 	};
 
 	// 5.

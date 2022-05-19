@@ -113,6 +113,10 @@ span a {
 	left: 80%;
 }
 
+.earth_parallax img {
+	animation: rotate linear 120s infinite;
+}
+
 .rock_parallax {
 	position: absolute;
 	top: 80%;
@@ -226,5 +230,14 @@ span a {
 	.twitter_parallax {
 		top: 75%;
 		left: 35%;
+	}
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(0deg);
 	}
 }

@@ -28,7 +28,7 @@ const SkillsMobile = () => {
 
 	return (
 		<>
-			<ScrollPage page={16}>
+			<ScrollPage page={17}>
 				<div className='skills-me'>
 					<span>
 						<Animator animation={batch(Fade(), Sticky())}>
@@ -90,7 +90,7 @@ const SkillsMobile = () => {
 					</span>
 				</div>
 			</ScrollPage>
-			<ScrollPage page={17}>
+			<ScrollPage page={18}>
 				<div className='skills-me'>
 					<span>
 						<Animator animation={batch(Sticky())}>
@@ -139,7 +139,7 @@ const SkillsMobile = () => {
 					</span>
 				</div>
 			</ScrollPage>
-			<ScrollPage page={18}>
+			<ScrollPage page={19}>
 				<div className='skills-me'>
 					<span>
 						<Animator animation={batch(Sticky())}>
@@ -182,7 +182,7 @@ const SkillsMobile = () => {
 					</span>
 				</div>
 			</ScrollPage>
-			<ScrollPage page={19}>
+			<ScrollPage page={20}>
 				<div className='skills-me'>
 					<span>
 						<Animator animation={batch(Sticky(), MoveOut(0, 200))}>

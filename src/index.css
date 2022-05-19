@@ -1,4 +1,15 @@
 @import url(//db.onlinewebfonts.com/c/2206d6cc490084998d531e8c1b2cbb4a?family=Druk+Wide+Bold);
+@font-face {
+	font-family: 'Druk Wide Bold';
+	src: url('//db.onlinewebfonts.com/t/2206d6cc490084998d531e8c1b2cbb4a.eot');
+	src: url('//db.onlinewebfonts.com/t/2206d6cc490084998d531e8c1b2cbb4a.eot?#iefix')
+			format('embedded-opentype'),
+		url('//db.onlinewebfonts.com/t/2206d6cc490084998d531e8c1b2cbb4a.woff2') format('woff2'),
+		url('//db.onlinewebfonts.com/t/2206d6cc490084998d531e8c1b2cbb4a.woff') format('woff'),
+		url('//db.onlinewebfonts.com/t/2206d6cc490084998d531e8c1b2cbb4a.ttf') format('truetype'),
+		url('//db.onlinewebfonts.com/t/2206d6cc490084998d531e8c1b2cbb4a.svg#Druk Wide Bold')
+			format('svg');
+}
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500; 700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Neonderthaw&family=Titan+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
@@ -42,8 +53,8 @@ body::-webkit-scrollbar-thumb {
 	border-radius: 5px;
 }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
 	body {
 		font-family: 'Seymour One', sans-serif;
 	}
-}
+} */

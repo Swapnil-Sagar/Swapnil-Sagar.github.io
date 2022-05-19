@@ -1,3 +1,6 @@
+html:focus-within {
+	scroll-behavior: smooth;
+}
 .black-background {
 	height: 500px;
 	position: absolute;
@@ -167,9 +170,9 @@
 	/* animation: anim 30s infinite;
 	border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;
 	box-shadow: 0 -2vmin 4vmin var(--primary) inset, 0 1vmin 4vmin var(--secondary) inset,
-		0 -2vmin 7vmin var(--fourth) inset;
+		0 -2vmin 7vmin var(--fourth) inset;*/
 
-	filter: drop-shadow(2vmin -2vmin 15vmin rgb(0, 0, 255)); */
+	/* filter: drop-shadow(2vmin -2vmin 10vmin rgb(0, 0, 255)); */
 }
 
 .rtl {
@@ -206,10 +209,10 @@
 	height: auto;
 	display: flex;
 	left: 500px;
-	animation: anim 30s infinite;
+	/* animation: anim 30s infinite; 
 	border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;
 	box-shadow: 0 -2vmin 4vmin var(--primary) inset, 0 1vmin 4vmin var(--secondary) inset,
-		0 -2vmin 7vmin var(--fourth) inset;
+		0 -2vmin 7vmin var(--fourth) inset;*/
 
 	filter: drop-shadow(2vmin -2vmin 10vmin rgb(0, 0, 255));
 }
@@ -226,10 +229,10 @@
 	height: auto;
 	display: flex;
 	right: 500px;
-	animation: anim 30s infinite;
+	/* animation: anim 30s infinite;
 	border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;
 	box-shadow: 0 -2vmin 4vmin var(--primary) inset, 0 1vmin 4vmin var(--secondary) inset,
-		0 -2vmin 7vmin var(--fourth) inset;
+		0 -2vmin 7vmin var(--fourth) inset;  */
 	filter: drop-shadow(2vmin -2vmin 10vmin rgb(0, 0, 255));
 }
 
@@ -294,13 +297,16 @@
 		animation: none;
 		border-radius: none;
 		box-shadow: none;
-		filter: none;
+		filter: drop-shadow(2vmin -2vmin 5vmin rgb(0, 0, 255));
 	}
 
 	.project-image2 {
 		position: initial;
 		height: auto;
 		margin-top: 20rem;
+		animation: none;
+		border-radius: none;
+		box-shadow: none;
 		filter: drop-shadow(2vmin -2vmin 5vmin rgb(0, 0, 255));
 	}
 
@@ -332,7 +338,7 @@
 	/* border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%; */
 	/* box-shadow: 0 -2vmin 4vmin var(--primary) inset, 0 1vmin 4vmin var(--secondary) inset,
 		0 -2vmin 7vmin var(--fourth) inset; */
-	filter: drop-shadow(2vmin -2vmin 12vmin rgb(0, 0, 255));
+	/* filter: drop-shadow(0vmin 2vmin 10vmin rgb(28, 0, 153)); */
 }
 
 .background-image-container img {
@@ -378,6 +384,10 @@
 	top: 60px;
 	font-family: 'Neonderthaw', cursive;
 	font-size: clamp(14px, 8vw, 150px);
+}
+
+.greeting {
+	filter: drop-shadow(3vmin -3vmin 0.5vmin rgba(206, 176, 93, 0.658));
 }
 
 @media only screen and (max-width: 768px) {
