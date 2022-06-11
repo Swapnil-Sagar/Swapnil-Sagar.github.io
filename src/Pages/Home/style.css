@@ -28,8 +28,19 @@ html:focus-within {
 	letter-spacing: 4px;
 }
 
+.name .first {
+	letter-spacing: 0.08em; /* make sure the letters don't overlap */
+
+	animation: stack 240ms cubic-bezier(0.46, 0.29, 0, 1.24) backwards 350ms,
+		glitch 2s ease infinite 2s alternate-reverse;
+}
+
 .name .last {
 	margin: 100px 0 0 50px;
+
+	letter-spacing: 0.08em; /* make sure the letters don't overlap */
+	animation: stack 340ms cubic-bezier(0.46, 0.29, 0, 1.24) forwards 250ms,
+		glitch 2s ease infinite 2s alternate-reverse;
 }
 
 .position {
@@ -52,7 +63,7 @@ html:focus-within {
 
 .position h2 {
 	letter-spacing: 2px;
-	font-size: clamp(16px, 1vw, 26px);
+	font-size: clamp(16px, 1.5vw, 26px);
 }
 
 /* responsive of header */
@@ -139,7 +150,7 @@ html:focus-within {
 	border-radius: 15px;
 	position: relative;
 	color: white;
-	cursor: pointer;
+	cursor: url(../../img/hand.png), auto;
 	min-width: 280px;
 }
 
@@ -153,10 +164,10 @@ html:focus-within {
 }
 
 :root {
-	--primary: #dff6ff;
-	--secondary: #5d8bf4;
-	--third: #2d31fa;
-	--fourth: #051367;
+	--primary: LightPink;
+	--secondary: MediumPurple;
+	--third: rgb(123, 104, 238);
+	--fourth: purple;
 }
 
 .portfolio-title {
@@ -168,9 +179,9 @@ html:focus-within {
 	right: 300px;
 	padding: 5rem;
 	/* animation: anim 30s infinite;
-	border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;
-	box-shadow: 0 -2vmin 4vmin var(--primary) inset, 0 1vmin 4vmin var(--secondary) inset,
-		0 -2vmin 7vmin var(--fourth) inset;*/
+	border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;*/
+	/* box-shadow: 0 -2vmin 4vmin var(--primary) inset, 0 1vmin 4vmin var(--secondary) inset,
+		0 -2vmin 7vmin var(--fourth) inset; */
 
 	/* filter: drop-shadow(2vmin -2vmin 10vmin rgb(0, 0, 255)); */
 }
@@ -181,10 +192,13 @@ html:focus-within {
 
 .portfolio-title h3 {
 	color: white;
-	font-family: 'Great Vibes', cursive;
-	font-size: clamp(18px, 6vw, 120px);
+	/* font-family: 'Great Vibes', cursive; */
+	font-size: clamp(18px, 6vw, 220px);
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 1px;
 	letter-spacing: 5px;
 	font-weight: 400;
+	width: max-content;
 	display: inline-block;
 	text-transform: capitalize;
 	margin-top: 10px;
@@ -193,6 +207,7 @@ html:focus-within {
 .portfolio-title p {
 	margin-top: 15px;
 	text-align: center;
+	max-width: 37rem;
 	/* font-family: 'Titan One', cursive; */
 	font-size: clamp(14px, 2.5vw, 48px);
 }
@@ -209,18 +224,22 @@ html:focus-within {
 	height: auto;
 	display: flex;
 	left: 500px;
-	/* animation: anim 30s infinite; 
+	/* animation: anim 30s infinite; */
 	border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;
-	box-shadow: 0 -2vmin 4vmin var(--primary) inset, 0 1vmin 4vmin var(--secondary) inset,
-		0 -2vmin 7vmin var(--fourth) inset;*/
+	/* box-shadow: 0 -2vmin 4vmin var(--primary) inset, 0 1vmin 4vmin var(--secondary) inset,
+		0 -2vmin 7vmin var(--fourth) inset; */
+}
 
-	filter: drop-shadow(2vmin -2vmin 10vmin rgb(0, 0, 255));
+.project-image img:hover {
+	filter: drop-shadow(2vmin -2vmin 8vmin rgb(204, 159, 63));
 }
 
 .project-image img {
 	width: 800px;
 	height: auto;
 	object-fit: contain;
+	filter: drop-shadow(2vmin -2vmin 8vmin var(--third));
+	transition: 0.1s ease-in-out;
 }
 
 .project-image2 {
@@ -229,17 +248,22 @@ html:focus-within {
 	height: auto;
 	display: flex;
 	right: 500px;
-	/* animation: anim 30s infinite;
+	/* animation: anim 30s infinite; */
 	border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;
-	box-shadow: 0 -2vmin 4vmin var(--primary) inset, 0 1vmin 4vmin var(--secondary) inset,
-		0 -2vmin 7vmin var(--fourth) inset;  */
-	filter: drop-shadow(2vmin -2vmin 10vmin rgb(0, 0, 255));
+	/* box-shadow: 0 -2vmin 4vmin var(--primary) inset, 0 1vmin 4vmin var(--secondary) inset,
+		0 -2vmin 7vmin var(--fourth) inset; */
 }
 
 .project-image2 img {
 	width: 800px;
 	height: auto;
 	object-fit: contain;
+	filter: drop-shadow(2vmin -2vmin 8vmin rgb(81, 0, 128));
+	transition: 0.1s ease-in-out;
+}
+
+.project-image2 img:hover {
+	filter: drop-shadow(2vmin -2vmin 8vmin rgb(204, 159, 63));
 }
 
 @media only screen and (max-width: 768px) {
@@ -272,13 +296,14 @@ html:focus-within {
 		height: 100vh;
 		position: relative;
 		right: 0;
+		top: 2rem;
 		padding: 0;
 		justify-content: flex-start;
 	}
 
 	.portfolio-title h3 {
 		color: white;
-		font-size: clamp(18px, 15vw, 240px);
+		font-size: clamp(18px, 10vw, 240px);
 		letter-spacing: 1px;
 		margin-top: 10px;
 		min-width: max-content;
@@ -286,7 +311,7 @@ html:focus-within {
 
 	.portfolio-title p {
 		margin-top: 50px;
-		font-size: clamp(14px, 5vw, 120px);
+		font-size: clamp(14px, 6vw, 120px);
 	}
 
 	.project-image {
@@ -294,20 +319,20 @@ html:focus-within {
 		height: auto;
 		margin-top: 20rem;
 
-		animation: none;
-		border-radius: none;
-		box-shadow: none;
-		filter: drop-shadow(2vmin -2vmin 5vmin rgb(0, 0, 255));
+		/* animation: none; */
+		/* border-radius: none; */
+		/* box-shadow: none; */
+		filter: none;
 	}
 
 	.project-image2 {
 		position: initial;
 		height: auto;
 		margin-top: 20rem;
-		animation: none;
-		border-radius: none;
-		box-shadow: none;
-		filter: drop-shadow(2vmin -2vmin 5vmin rgb(0, 0, 255));
+		/* animation: none; */
+		/* border-radius: none; */
+		/* box-shadow: none; */
+		filter: none;
 	}
 
 	.project-image img {
@@ -383,11 +408,14 @@ html:focus-within {
 	position: relative;
 	top: 60px;
 	font-family: 'Neonderthaw', cursive;
+	/* font-family: 'Great Vibes', cursive; */
+	/* -webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 1px; */
 	font-size: clamp(14px, 8vw, 150px);
 }
 
 .greeting {
-	filter: drop-shadow(3vmin -3vmin 0.5vmin rgba(206, 176, 93, 0.658));
+	filter: drop-shadow(3vmin -3vmin 0.5vmin #888888a8);
 }
 
 @media only screen and (max-width: 768px) {
@@ -436,7 +464,7 @@ span > div {
 }
 
 span p {
-	cursor: pointer;
+	/* cursor: pointer; */
 	/* font-family: 'Neonderthaw', cursive; */
 	font-size: clamp(16px, 3vw, 42px);
 	margin-left: 22px;
@@ -489,6 +517,17 @@ span p {
 	object-fit: cover;
 }
 
+.footer {
+	font-family: 'Great Vibes', cursive;
+	font-size: clamp(10px, 10vw, 50vw);
+}
+
+.background-contact-container {
+	width: 100vw;
+	/* height: 100vh; */
+	object-fit: cover;
+}
+
 @media only screen and (max-width: 768px) {
 	.background-skills-container {
 		bottom: -18rem;
@@ -504,17 +543,6 @@ span p {
 	.skills-wrapper h2 {
 		font-size: clamp(1.5rem, 2rem, 2.5rem);
 	}
-}
-
-.footer {
-	font-family: 'Open Sans', sans-serif;
-	font-size: clamp(10px, 3vh, 38px);
-}
-
-.background-contact-container {
-	width: 100vw;
-	/* height: 100vh; */
-	object-fit: cover;
 }
 
 /* ------------------- Keyframe Animation ---------------------- */
@@ -567,5 +595,40 @@ span p {
 
 	90% {
 		border-radius: 20% 80% 20% 80% / 20% 80% 20% 80%;
+	}
+}
+
+@keyframes stack {
+	0% {
+		opacity: 0;
+		transform: translateX(-50%);
+		text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+	}
+	60% {
+		opacity: 0.5;
+		transform: translateX(50%);
+	}
+	80% {
+		transform: none;
+		opacity: 1;
+		text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+	}
+	100% {
+		text-shadow: none;
+	}
+}
+
+@keyframes glitch {
+	0% {
+		text-shadow: -5px 6px 0 red, 5px -6px 0 blue;
+		transform: translate(var(--glitch-translate));
+	}
+	10% {
+		text-shadow: 5px -6px 0 red, -5px 6px 0 blue;
+	}
+	20%,
+	100% {
+		text-shadow: none;
+		transform: none;
 	}
 }

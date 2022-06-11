@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { MouseParallaxChild, MouseParallaxContainer } from 'react-parallax-mouse';
 import face2 from '../../img/faceIllus2.png';
 import earth from '../../img/Planets/earth.png';
@@ -9,11 +10,12 @@ import galaxyImage from '../../img/background.png';
 import { SiInstagram } from 'react-icons/si';
 import { FaGithub, FaTwitter } from 'react-icons/fa';
 import { TiSocialLinkedin } from 'react-icons/ti';
-import { CgHeart } from 'react-icons/cg';
+import { RiHeartLine, RiHeartFill } from 'react-icons/ri';
 import { useIsMobile } from '../../utils/utils';
 import './style.css';
 
 export default function App() {
+	const [hearted, setHearted] = useState(true);
 	const isMobile = useIsMobile();
 	return (
 		<>
@@ -43,7 +45,7 @@ export default function App() {
 					<MouseParallaxChild factorX={0.01} factorY={0.01} className='saturn_parallax'>
 						<img src={saturn} alt='' />
 					</MouseParallaxChild>
-					<MouseParallaxChild factorX={0.03} factorY={0.03} className='earth_parallax'>
+					<MouseParallaxChild factorX={0.03} factorY={0.02} className='earth_parallax'>
 						<img src={earth} alt='' />
 					</MouseParallaxChild>
 					<MouseParallaxChild factorX={0.06} factorY={0.06} className='rock_parallax'>
@@ -60,7 +62,7 @@ export default function App() {
 						<img style={{ width: '100vw' }} src={mid} alt='' />
 					</MouseParallaxChild>
 					<MouseParallaxChild
-						factorX={0.03}
+						factorX={0.04}
 						factorY={0.03}
 						updateStyles={{
 							position: 'absolute',
@@ -106,7 +108,9 @@ export default function App() {
 					</MouseParallaxChild>
 				</MouseParallaxContainer>
 				<div className='container'>
-					<h1>Contact Me</h1>
+					<h1>
+						WANNA <br /> CHAT?
+					</h1>
 					<form action=''>
 						<img src={face2} alt='face2' />
 
@@ -115,8 +119,23 @@ export default function App() {
 						</button>
 					</form>
 					<p>
-						Made with <CgHeart style={{ margin: '0 8px' }} color='red' size='1.5em' /> by Swapnil
-						Sagar
+						Made with
+						{hearted ? (
+							<RiHeartFill
+								onClick={() => setHearted(false)}
+								className='heart'
+								color='red'
+								size='1.5em'
+							/>
+						) : (
+							<RiHeartLine
+								onClick={() => setHearted(true)}
+								className='heart'
+								color='red'
+								size='1.5em'
+							/>
+						)}
+						by Swapnil Sagar
 					</p>
 				</div>
 			</div>

@@ -22,7 +22,7 @@ const AboutMe = () => {
 	return (
 		<>
 			<ScrollPage page={2}>
-				<Animator animation={batch(Fade(), Sticky())}>
+				<Animator animation={batch(FadeIn(), Sticky())}>
 					<div className='details'>
 						<p className='bio'>
 							I am a dev who loves to build stuffs for the web. <br />
@@ -42,7 +42,7 @@ const AboutMe = () => {
 				</Animator>
 			</ScrollPage>
 			<ScrollPage page={3}>
-				<Animator animation={batch(Fade(), Sticky(), MoveOut(1000, 500))}>
+				<Animator animation={batch(FadeIn(), Sticky(), MoveOut(1000, 500))}>
 					<div className='details'>
 						<p className='bio'>
 							I am a dev who loves to build stuffs for the web. <br />

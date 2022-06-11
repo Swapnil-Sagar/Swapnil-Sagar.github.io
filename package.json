@@ -13,6 +13,7 @@
     "react-scripts": "5.0.1",
     "react-scroll-motion": "^0.2.6",
     "smooth-scrollbar": "^8.7.4",
+    "vh-check": "^2.0.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

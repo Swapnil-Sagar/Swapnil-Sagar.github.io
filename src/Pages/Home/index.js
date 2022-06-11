@@ -87,11 +87,16 @@ const Home = () => {
 				{!isMobile ? <SkillsWeb /> : <SkillMobile />}
 
 				<ScrollPage page={21}>
-					<Animator animation={batch(Fade(), Sticky())}>
-						<span className='footer'>Thank You, for your time.</span>
+					<Animator animation={batch(FadeIn(), Sticky())}>
+						<span className='footer'>Thank You...</span>
 					</Animator>
 				</ScrollPage>
 				<ScrollPage page={22}>
+					<Animator animation={batch(Fade(), Sticky())}>
+						<span className='footer'>Thank You...</span>
+					</Animator>
+				</ScrollPage>
+				<ScrollPage page={23}>
 					<Animator animation={batch(Fade(), Sticky())}>
 						<div className='background-contact-container'>
 							<Landing />
