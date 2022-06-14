@@ -26,6 +26,8 @@ export default function App() {
 					flexDirection: 'column',
 					justifyContent: 'center',
 					alignItems: 'center',
+					background: `url(${galaxyImage}) no-repeat`,
+					backgroundSize: 'cover',
 				}}
 			>
 				<MouseParallaxContainer
@@ -37,8 +39,6 @@ export default function App() {
 						justifyContent: 'center',
 						alignContent: 'center',
 						gridTemplateColumns: 'auto auto auto auto auto',
-						background: `url(${galaxyImage}) no-repeat`,
-						backgroundSize: 'cover',
 					}}
 					resetOnLeave
 				>
