@@ -415,7 +415,7 @@ html:focus-within {
 }
 
 .greeting {
-	filter: drop-shadow(3vmin -3vmin 0.5vmin #888888a8);
+	animation: neon 5s infinite;
 }
 
 @media only screen and (max-width: 768px) {
@@ -630,5 +630,20 @@ span p {
 	100% {
 		text-shadow: none;
 		transform: none;
+	}
+}
+
+@keyframes neon {
+	0%,
+	39%,
+	41%,
+	59%,
+	61%,
+	100% {
+		text-shadow: white 0 0 12px, #ff3aad 0 0 24px, #ff3aad 0 0 36px;
+	}
+	40%,
+	60% {
+		text-shadow: none;
 	}
 }
