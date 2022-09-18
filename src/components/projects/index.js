@@ -190,7 +190,7 @@ const Projects = () => {
 						<Animator animation={batch(Fade(), Sticky(), MoveIn(0, 200), MoveOut(0, -200))}>
 							<div className='portfolio-title'>
 								<h3>5. Slacky</h3>
-								<p>A Slack like application for connections people and community.</p>
+								<p>A Slack like application for connecting people and community.</p>
 							</div>
 						</Animator>
 						<Animator animation={batch(Sticky(), MoveIn(0, 1000), MoveOut(0, -1000))}>
