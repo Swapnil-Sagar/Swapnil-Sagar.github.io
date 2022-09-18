@@ -38,7 +38,7 @@ const Home = () => {
 			<ScrollContainer snap={isMobile ? 'none' : 'none'}>
 				<ScrollPage page={0}>
 					<Animator animation={batch(Fade(), Sticky())}>
-						<div style={{ background: '#2C2A35', width: '100vw', height: '100vh' }}>
+						<div className='black-background'>
 							<Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
 								<div className='image-container'>
 									<img src={isMobile ? headerImageMb : headerImage} alt='headerImg' />
@@ -55,8 +55,8 @@ const Home = () => {
 								</div>
 							</Animator>
 							<Animator animation={batch(Fade(), Sticky(), MoveOut(-100, 100))}>
-								<div className='position'>
-									<h2 className='last'>Front-End Developer</h2>
+								<div className='name'>
+									<h2 className='position'>Front-End Developer</h2>
 								</div>
 							</Animator>
 						</div>

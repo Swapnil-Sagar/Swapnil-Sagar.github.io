@@ -2,8 +2,9 @@ html:focus-within {
 	scroll-behavior: smooth;
 }
 .black-background {
-	height: 500px;
-	position: absolute;
+	background: rgba(44, 42, 53, 1);
+	width: 100vw;
+	height: 100vh;
 }
 
 .image-container {
@@ -36,81 +37,109 @@ html:focus-within {
 }
 
 .name .last {
-	margin: 100px 0 0 50px;
+	margin: 20% 0 0 10%;
 
 	letter-spacing: 0.08em; /* make sure the letters don't overlap */
 	animation: stack 340ms cubic-bezier(0.46, 0.29, 0, 1.24) forwards 250ms,
 		glitch 2s ease infinite 2s alternate-reverse;
 }
 
-.position {
-	position: absolute;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.name .position {
+	margin: 90% 0 0 30%;
 	font-family: 'Roboto', sans-serif;
-	margin-top: 220px;
-	width: clamp(280px, 25vw, 450px);
-}
-
-.position > div {
-	width: clamp(30px, 3vw, 70px);
-	height: 2px;
-	background-color: white;
-	margin-right: 20px;
-	border-radius: 10px;
-}
-
-.position h2 {
 	letter-spacing: 2px;
 	font-size: clamp(16px, 1.5vw, 26px);
+	width: max-content;
 }
 
 /* responsive of header */
 
+@media only screen and (max-width: 835px) {
+	.black-background {
+		background: linear-gradient(180deg, rgba(1, 1, 1, 0) 0%, rgba(44, 42, 53, 1) 15%);
+	}
+	.image-container {
+		height: auto;
+		position: relative;
+		left: 0;
+		bottom: -25vh;
+	}
+}
 @media only screen and (max-width: 768px) {
 	.image-container {
 		height: 100vh;
 		position: relative;
 		left: 0;
-		bottom: -68vh;
+		bottom: -45vh;
 	}
 
 	.image-container img {
 		height: auto;
 	}
-
 	.name {
-		margin-left: 10px;
-		margin-top: 40px;
 		position: absolute;
 		top: -15rem;
 		left: -8rem;
 	}
 	.name .last {
-		margin: 50px 0 0 50px;
+		margin: 20% 0 0 10%;
 	}
 
 	.name h2 {
 		font-size: clamp(22px, 12vw, 121px);
 	}
 
-	.position {
-		margin-top: 100px;
-		margin-left: -15px;
-		position: relative;
-		top: -7.5rem;
-		left: 25%;
-	}
-
-	.position > div {
-		width: 0px;
-		margin-right: -40px;
+	.name .position {
+		margin: 120% 0 0 80%;
 	}
 
 	.position h2 {
 		letter-spacing: 2px;
 		font-size: clamp(12px, 4vw, 42px);
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.image-container {
+		height: 100vh;
+		position: relative;
+		left: 0;
+		bottom: -30vh;
+	}
+
+	.name .position {
+		margin: 60% 0 0 25%;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.image-container {
+		height: 100vh;
+		position: relative;
+		left: 0;
+		bottom: -67vh;
+	}
+}
+@media only screen and (max-width: 400px) {
+	.image-container {
+		height: 100vh;
+		position: relative;
+		left: 0;
+		bottom: -65vh;
+	}
+	.name .position {
+		margin: 68% 0 0 40%;
+	}
+}
+@media only screen and (max-width: 300px) {
+	.image-container {
+		height: 100vh;
+		position: relative;
+		left: 0;
+		bottom: -75vh;
+	}
+	.name .position {
+		margin: 62% 0 0 25%;
 	}
 }
 
