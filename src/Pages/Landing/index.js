@@ -6,7 +6,7 @@ import saturn from '../../img/Planets/saturn.png';
 import rock from '../../img/Planets/rock.png';
 import mid from '../../img/Planets/mid.png';
 import fore from '../../img/Planets/foreground.png';
-import galaxyImage from '../../img/background.png';
+import galaxyImage from '../../img/background2.jpg';
 import { SiInstagram } from 'react-icons/si';
 import { FaGithub, FaTwitter } from 'react-icons/fa';
 import { TiSocialLinkedin } from 'react-icons/ti';

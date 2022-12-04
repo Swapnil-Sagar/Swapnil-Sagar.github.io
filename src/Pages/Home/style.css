@@ -319,9 +319,9 @@ html:focus-within {
 		height: auto;
 		margin-top: 20rem;
 
-		/* animation: none; */
-		/* border-radius: none; */
-		/* box-shadow: none; */
+		animation: none;
+		border-radius: none;
+		box-shadow: none;
 		filter: none;
 	}
 
@@ -329,23 +329,33 @@ html:focus-within {
 		position: initial;
 		height: auto;
 		margin-top: 20rem;
-		/* animation: none; */
-		/* border-radius: none; */
-		/* box-shadow: none; */
+		animation: none;
+		border-radius: none;
+		box-shadow: none;
 		filter: none;
 	}
 
 	.project-image img {
 		width: auto;
 		height: 17rem;
+		filter: none;
 	}
 	.project-image2 img {
 		width: auto;
 		height: 17rem;
+		filter: none;
 	}
 
 	.rtl {
 		left: auto;
+	}
+
+	.project-image2 img:hover {
+		filter: none;
+	}
+
+	.project-image img:hover {
+		filter: none;
 	}
 }
 
@@ -416,6 +426,22 @@ html:focus-within {
 
 .greeting {
 	animation: neon 5s infinite;
+}
+
+@media only screen and (max-width: 1280px) {
+	.details .greeting {
+		font-size: clamp(14px, 12vw, 80px);
+		position: relative;
+		top: 13vh;
+	}
+	.details .bio {
+		top: 55vh;
+		/* font-family: 'Titan One', cursive; */
+		font-size: clamp(14px, 3vw, 48px);
+	}
+	.background-image-container {
+		width: 48vw;
+	}
 }
 
 @media only screen and (max-width: 768px) {
@@ -526,6 +552,16 @@ span p {
 	width: 100vw;
 	/* height: 100vh; */
 	object-fit: cover;
+}
+
+@media only screen and (max-width: 1280px) {
+	.background-skills-container {
+		max-width: 1000px;
+	}
+	span p {
+		font-size: clamp(16px, 3vw, 35px);
+		margin-left: 22px;
+	}
 }
 
 @media only screen and (max-width: 768px) {
