@@ -25,13 +25,13 @@ const AboutMe = () => {
 				<Animator animation={batch(FadeIn(), Sticky())}>
 					<div className='details'>
 						<p className='bio'>
-							I am a dev who loves to build stuffs for the web. <br />
-							Who is also passionate to become a fullstacker one day.
+							I am a <span>dev</span> who loves to build stuffs for the web. <br />
+							Who is also passionate about <span>Web3</span> space and blockchain.
 						</p>
-						<div className='greeting'>Hey There!</div>
+						<p className='greeting'>Hey There!</p>
 						<p className='bio right'>
-							I have over a year of professional developing experience and I still thrive to upgrade
-							my skills constantly.
+							I have over <span>2 years</span> of professional developing experience and I still
+							thrive to <span>upgrade</span> my skills constantly.
 						</p>
 					</div>
 				</Animator>
@@ -45,13 +45,13 @@ const AboutMe = () => {
 				<Animator animation={batch(FadeIn(), Sticky(), MoveOut(1000, 500))}>
 					<div className='details'>
 						<p className='bio'>
-							I am a dev who loves to build stuffs for the web. <br />
-							Who is also passionate to become a fullstacker one day.
+							I am a <span>dev</span> who loves to build stuffs for the web. <br />
+							Who is also passionate about <span>Web3</span> space and blockchain.
 						</p>
-						<div className='greeting'>Hey There!</div>
+						<p className='greeting'>Hey There!</p>
 						<p className='bio right'>
-							I have over a year of professional developing experience and I still thrive to upgrade
-							my skills constantly.
+							I have over <span>2 years</span> of professional developing experience and I still
+							thrive to <span>upgrade</span> my skills constantly.
 						</p>
 					</div>
 				</Animator>

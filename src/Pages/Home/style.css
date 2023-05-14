@@ -395,6 +395,11 @@ html:focus-within {
 	font-size: clamp(20px, 1.4vw, 28px);
 }
 
+.details .bio span {
+	color: rgb(204, 159, 63);
+	font-size: clamp(14px, 4vw, 48px);
+}
+
 .details .bio {
 	position: relative;
 	top: 50vh;

@@ -88,12 +88,12 @@ const Home = () => {
 
 				<ScrollPage page={21}>
 					<Animator animation={batch(FadeIn(), Sticky())}>
-						<span className='footer'>Thank You...</span>
+						<p className='footer'>Thank You...</p>
 					</Animator>
 				</ScrollPage>
 				<ScrollPage page={22}>
 					<Animator animation={batch(Fade(), Sticky())}>
-						<span className='footer'>Thank You...</span>
+						<p className='footer'>Thank You...</p>
 					</Animator>
 				</ScrollPage>
 				<ScrollPage page={23}>
