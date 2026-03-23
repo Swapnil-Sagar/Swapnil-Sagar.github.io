@@ -18,7 +18,16 @@ import {
 } from 'react-scroll-motion';
 import faceIllus from '../../img/face-illus.png';
 
+const getYearsOfExperience = () => {
+	const start = new Date(2021, 3); // April 2021
+	const now = new Date();
+	let years = now.getFullYear() - start.getFullYear();
+	if (now.getMonth() < start.getMonth()) years--;
+	return years;
+};
+
 const AboutMe = () => {
+	const years = getYearsOfExperience();
 	return (
 		<>
 			<ScrollPage page={2}>
@@ -30,7 +39,7 @@ const AboutMe = () => {
 						</p>
 						<p className='greeting'>Hey There!</p>
 						<p className='bio right'>
-							I have over <span>2 years</span> of professional developing experience and I still
+							I have over <span>{years} years</span> of professional developing experience and I still
 							thrive to <span>upgrade</span> my skills constantly.
 						</p>
 					</div>
@@ -50,7 +59,7 @@ const AboutMe = () => {
 						</p>
 						<p className='greeting'>Hey There!</p>
 						<p className='bio right'>
-							I have over <span>2 years</span> of professional developing experience and I still
+							I have over <span>{years} years</span> of professional developing experience and I still
 							thrive to <span>upgrade</span> my skills constantly.
 						</p>
 					</div>
