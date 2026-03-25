@@ -61,7 +61,7 @@ const AboutMe = () => {
 					viewport={{ once: true, amount: 0.3 }}
 				>
 					<p className='bio'>
-						I am a <span>Frontend Developer</span> who loves to build stuffs for the
+						I am a <span>Frontend Dev</span> who loves to build stuffs for the
 						web. <br />
 						Who is also passionate about <span>Web3</span> space and blockchain.
 					</p>
