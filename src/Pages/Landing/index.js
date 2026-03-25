@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MouseParallaxChild, MouseParallaxContainer } from 'react-parallax-mouse';
+import { motion } from 'framer-motion';
 import face2 from '../../img/faceIllus2.png';
 import earth from '../../img/Planets/earth.png';
 import saturn from '../../img/Planets/saturn.png';
@@ -14,131 +14,139 @@ import { RiHeartLine, RiHeartFill } from 'react-icons/ri';
 import { useIsMobile } from '../../utils/utils';
 import './style.css';
 
-export default function App() {
+const socialLinks = [
+	{
+		Icon: SiInstagram,
+		href: 'https://www.instagram.com/_swapnilsagar_/?hl=en',
+		id: 'insta',
+		style: { transform: 'rotate(20deg)' },
+	},
+	{
+		Icon: TiSocialLinkedin,
+		href: 'https://www.linkedin.com/in/swapnilsagar09/',
+		id: 'linkedin',
+		style: { transform: 'rotate(-20deg)' },
+	},
+	{
+		Icon: FaGithub,
+		href: 'https://github.com/Swapnil-Sagar',
+		id: 'github',
+		style: {},
+	},
+	{
+		Icon: FaTwitter,
+		href: 'https://twitter.com/sagar946',
+		id: 'twitter',
+		style: {},
+	},
+];
+
+const floatAnimation = {
+	y: [0, -15, 0],
+	transition: {
+		duration: 4,
+		repeat: Infinity,
+		ease: 'easeInOut',
+	},
+};
+
+export default function Landing() {
 	const [hearted, setHearted] = useState(true);
 	const isMobile = useIsMobile();
-	return (
-		<>
-			<div
-				style={{
-					height: '100vh',
-					display: 'flex',
-					flexDirection: 'column',
-					justifyContent: 'center',
-					alignItems: 'center',
-					background: `url(${galaxyImage}) no-repeat`,
-					backgroundSize: 'cover',
-				}}
-			>
-				<MouseParallaxContainer
-					className='parallax'
-					containerStyles={{
-						width: '100%',
-						height: '100%',
-						display: 'grid',
-						justifyContent: 'center',
-						alignContent: 'center',
-						gridTemplateColumns: 'auto auto auto auto auto',
-					}}
-					resetOnLeave
-				>
-					<MouseParallaxChild factorX={0.01} factorY={0.01} className='saturn_parallax'>
-						<img src={saturn} alt='' />
-					</MouseParallaxChild>
-					<MouseParallaxChild factorX={0.03} factorY={0.02} className='earth_parallax'>
-						<img src={earth} alt='' />
-					</MouseParallaxChild>
-					<MouseParallaxChild factorX={0.06} factorY={0.06} className='rock_parallax'>
-						<img style={{ height: isMobile ? '2.5em ' : '6em' }} src={rock} alt='' />
-					</MouseParallaxChild>
-					<MouseParallaxChild
-						factorX={0.02}
-						factorY={0.01}
-						updateStyles={{
-							position: 'absolute',
-							bottom: '-20%',
-						}}
-					>
-						<img style={{ width: '100vw' }} src={mid} alt='' />
-					</MouseParallaxChild>
-					<MouseParallaxChild
-						factorX={0.04}
-						factorY={0.03}
-						updateStyles={{
-							position: 'absolute',
-							right: '-5%',
-							bottom: '0',
-						}}
-					>
-						<img style={{ height: '50vh' }} src={fore} alt='' />
-					</MouseParallaxChild>
-					<MouseParallaxChild factorX={0.06} factorY={0.03} className='insta_parallax'>
-						<a
-							href='https://www.instagram.com/_swapnilsagar_/?hl=en'
-							target='_blank'
-							rel='noreferrer'
-						>
-							<SiInstagram
-								className='icon'
-								id='insta'
-								style={{ transform: 'rotate(20deg)' }}
-								size={isMobile ? '2.5em ' : '4em'}
-							/>
-						</a>
-					</MouseParallaxChild>
-					<MouseParallaxChild factorX={0.06} factorY={0.03} className='linkedin_parallax'>
-						<a href='https://www.linkedin.com/in/swapnilsagar09/' target='_blank' rel='noreferrer'>
-							<TiSocialLinkedin
-								className='icon'
-								id='linkedin'
-								style={{ transform: 'rotate(-20deg)' }}
-								size={isMobile ? '3.2em ' : '4em'}
-							/>
-						</a>
-					</MouseParallaxChild>
-					<MouseParallaxChild factorX={0.06} factorY={0.03} className='github_parallax'>
-						<a href='https://github.com/Swapnil-Sagar' target='_blank' rel='noreferrer'>
-							<FaGithub className='icon' id='github' size={isMobile ? '2.5em ' : '4em'} />
-						</a>
-					</MouseParallaxChild>
-					<MouseParallaxChild factorX={0.06} factorY={0.03} className='twitter_parallax'>
-						<a href='https://twitter.com/sagar946' target='_blank' rel='noreferrer'>
-							<FaTwitter className='icon' id='twitter' size={isMobile ? '2.5em ' : '4em'} />
-						</a>
-					</MouseParallaxChild>
-				</MouseParallaxContainer>
-				<div className='container'>
-					<h1>
-						WANNA <br /> CHAT?
-					</h1>
-					<form action=''>
-						<img src={face2} alt='face2' />
 
-						<button>
-							<a href='mailto:swapnilsagar09@gmail.com'>MAIL ME</a>
-						</button>
-					</form>
-					<p>
-						Made with
-						{hearted ? (
-							<RiHeartFill
-								onClick={() => setHearted(false)}
-								className='heart'
-								color='red'
-								size='1.5em'
-							/>
-						) : (
-							<RiHeartLine
-								onClick={() => setHearted(true)}
-								className='heart'
-								color='red'
-								size='1.5em'
-							/>
-						)}
-						by Swapnil Sagar
-					</p>
-				</div>
+	return (
+		<section
+			className='landing-section'
+			id='contact'
+			style={{
+				background: `url(${galaxyImage}) no-repeat center center`,
+				backgroundSize: 'cover',
+			}}
+		>
+			{/* Decorative planets */}
+			<motion.img
+				src={saturn}
+				alt=''
+				className='planet saturn-planet'
+				animate={floatAnimation}
+			/>
+			<motion.img
+				src={earth}
+				alt=''
+				className='planet earth-planet'
+				animate={{ ...floatAnimation, transition: { ...floatAnimation.transition, delay: 1 } }}
+			/>
+			<motion.img
+				src={rock}
+				alt=''
+				className='planet rock-planet'
+				style={{ height: isMobile ? '2.5em' : '6em', width: 'auto' }}
+				animate={{
+					...floatAnimation,
+					transition: { ...floatAnimation.transition, delay: 0.5, duration: 3 },
+				}}
+			/>
+			<img src={mid} alt='' className='planet mid-layer' />
+			<img src={fore} alt='' className='planet fore-layer' />
+
+			{/* Social icons */}
+			<div className='social-icons-float'>
+				{socialLinks.map(({ Icon, href, id, style }, index) => (
+					<motion.a
+						key={id}
+						href={href}
+						target='_blank'
+						rel='noreferrer'
+						className={`social-float-icon ${id}-float`}
+						whileHover={{ scale: 1.3 }}
+						whileTap={{ scale: 0.95 }}
+						initial={{ opacity: 0, y: 30 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ delay: index * 0.1, duration: 0.5 }}
+					>
+						<Icon className='icon' id={id} style={style} size={isMobile ? '2.5em' : '3.5em'} />
+					</motion.a>
+				))}
 			</div>
-		</>
+
+			{/* Contact card */}
+			<motion.div
+				className='container'
+				initial={{ opacity: 0, scale: 0.9 }}
+				whileInView={{ opacity: 1, scale: 1 }}
+				viewport={{ once: true }}
+				transition={{ duration: 0.7, ease: 'easeOut' }}
+			>
+				<h1>
+					WANNA <br /> CHAT?
+				</h1>
+				<form action=''>
+					<img src={face2} alt='face2' />
+					<button>
+						<a href='mailto:swapnilsagar09@gmail.com'>MAIL ME</a>
+					</button>
+				</form>
+				<p>
+					Made with
+					{hearted ? (
+						<RiHeartFill
+							onClick={() => setHearted(false)}
+							className='heart'
+							color='red'
+							size='1.5em'
+						/>
+					) : (
+						<RiHeartLine
+							onClick={() => setHearted(true)}
+							className='heart'
+							color='red'
+							size='1.5em'
+						/>
+					)}
+					by Swapnil Sagar
+				</p>
+			</motion.div>
+		</section>
 	);
 }
