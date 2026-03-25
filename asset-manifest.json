@@ -1,13 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.c22dcfc4.css",
-    "main.js": "/static/js/main.6fe2b2e1.js",
+    "main.css": "/static/css/main.e281bd63.css",
+    "main.js": "/static/js/main.b4f9b205.js",
+    "static/media/battlefleet.png": "/static/media/battlefleet.4805be02816e411b0cec.png",
     "static/media/slacky.png": "/static/media/slacky.7547be5d8fce346f71ee.png",
     "static/media/mid.png": "/static/media/mid.383ec1b8e9a3480589ba.png",
     "static/media/social.png": "/static/media/social.e1e3102687c1c3e4ef96.png",
-    "static/media/Kailash.png": "/static/media/Kailash.6c52e306c922494f289a.png",
     "static/media/earth.png": "/static/media/earth.e8063432f173759bbf18.png",
-    "static/media/nftie.png": "/static/media/nftie.8adc2d3d9afcfb78b628.png",
     "static/media/background2.jpg": "/static/media/background2.f15dfd4fbd04b1ddd1a0.jpg",
     "static/media/header-image2.jpg": "/static/media/header-image2.389c8c106173485ec69e.jpg",
     "static/media/dfrm.png": "/static/media/dfrm.e9c277b7cdcab4b0ade6.png",
@@ -19,15 +18,12 @@
     "static/media/header-image-mb.png": "/static/media/header-image-mb.cd4a62f3de5f030d4646.png",
     "static/media/saturn.png": "/static/media/saturn.1726ec04691fce9a2eda.png",
     "static/media/rock.png": "/static/media/rock.2648bdcc0ec23d4d6036.png",
-    "static/media/socialliIcon.png": "/static/media/socialliIcon.e41afa88e603ec0ad6dd.png",
-    "static/media/reactIcon.png": "/static/media/reactIcon.79ff9dc3e28f44e90d6b.png",
-    "static/media/thirdwebIcon.png": "/static/media/thirdwebIcon.f9b95ca0ad79a5b125d8.png",
     "index.html": "/index.html",
-    "main.c22dcfc4.css.map": "/static/css/main.c22dcfc4.css.map",
-    "main.6fe2b2e1.js.map": "/static/js/main.6fe2b2e1.js.map"
+    "main.e281bd63.css.map": "/static/css/main.e281bd63.css.map",
+    "main.b4f9b205.js.map": "/static/js/main.b4f9b205.js.map"
   },
   "entrypoints": [
-    "static/css/main.c22dcfc4.css",
-    "static/js/main.6fe2b2e1.js"
+    "static/css/main.e281bd63.css",
+    "static/js/main.b4f9b205.js"
   ]
 }
